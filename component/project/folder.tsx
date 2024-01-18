@@ -3,7 +3,7 @@ import styles from './folder.module.css'
 
 export function Folder(){
     return(
-        <div className={`${styles.container}`}>
+        <div className={`${styles.container} ${styles.fadeInRight} ${styles.animated}`}>
             <div className={`${styles.folder}`}>
                 <div className={`${styles.block_title}`}>
                     <Image src={'/header/dropdown_icon.png'} width={13} height={6} alt=""></Image>
