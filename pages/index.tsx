@@ -193,7 +193,7 @@ export default function Home() {
     return(
       <div ref={refDismensionItem} key={data?.index} className={`${styles.recommend_item}`}>
         <div className={`${styles.recommend_img}`}>
-          <Image src={data?.image} alt={data?.text} width={160} height={170}></Image>
+          <Image src={data?.image} alt={data?.text} width={171} height={160}></Image>
         </div>
         <p className={`${styles.recommend_text}`}>{data?.text}</p>
       </div>
@@ -203,7 +203,7 @@ export default function Home() {
     return(
       <div key={data?.index} className={`${styles.recently_item}`}>
         <div className={`${styles.recently_img}`}>
-          <Image src={data?.image} alt={data?.text} width={160} height={170}></Image>
+          <Image src={data?.image} alt={data?.text} width={171} height={160}></Image>
         </div>
         <p className={`${styles.recently_text}`}>{data?.text}</p>
         <p className={`${styles.recently_text2}`}>{data?.text2}</p>
