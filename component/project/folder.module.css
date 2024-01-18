@@ -90,3 +90,36 @@
     font-weight: 700;
     line-height: normal;
 }
+@media screen and (max-width:1600px) {
+    .folder_content{
+        gap: 20px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .folder_content{
+        gap: 10px;
+    }
+}
+@media screen and (max-width:800px) {
+    .folder_content{
+        gap: 20px;
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+.animated{
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}

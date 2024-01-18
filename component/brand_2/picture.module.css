@@ -1,0 +1,46 @@
+.img1{
+    height: 200px;
+    width: 200px;
+}
+.container{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: stretch;
+    justify-items: stretch;
+    
+}
+.preview_img{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.img2{
+    height: 80vh;
+    width: auto;
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+.animated{
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}

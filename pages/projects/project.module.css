@@ -1,5 +1,5 @@
 .container{
-    width: calc(100% - 320px);
+    width: calc(100% - 330px);
     box-sizing: border-box;
     padding: 52px 34px 60px 34px;
 }
@@ -195,4 +195,23 @@
     .tab_block ul{
         gap: 30px;
     }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+.animated{
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
 }
