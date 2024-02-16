@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import React from 'react';
 import styles from './navbarMobile.module.css'
-import { ExampleIcon, HomeIcon, PlusIcon, ProjectIcon, StarIcon } from '../../public/navbarMobile'
+import { ExampleIcon, HomeIcon, PlusIcon, ProjectIcon, StarIcon } from '../../../../public/navbarMobile'
 
 const NavMobile = () => {
   return (
@@ -29,4 +28,4 @@ const NavMobile = () => {
   )
 }
 
-export default NavMobile
+export default NavMobile;

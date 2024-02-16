@@ -18,11 +18,13 @@ export default function TabSide(){
         query: "(max-width: 414px)"
       });
       const isTabnetCheck: boolean = useMediaQuery({
-        query: "(max-width: 913px)"
+        query: "(max-width: 1025px)"
       });
+
+     
     
     return(
-        <div className={`${styles.container} ${locationOfSite.name == 'sample' &&  styles.sidebar_fix} ${!isTabSide && styles.sidebar_transform}`}  >
+        <div className={`${styles.container} ${locationOfSite.name == 'sample' &&  styles.sidebar_fix} ${!isTabSide  && styles.sidebar_transform} ${isTabnetCheck ? styles.sidebar_fixed : ''}`}  >
             <div className={styles.user_block}>
                 <Image src={'/tabside/avatar.png'} width={49} height={49} alt='avatar'></Image>
                 <p>Nguyễn Văn Mèo Em</p>

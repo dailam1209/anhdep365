@@ -23,6 +23,7 @@ import ItemSampleFlow from "@/commons/Slide/itemSampleFlow";
 import NavMobile from "@/commons/navbarMobile/navMobile";
 import stylePhoto from "./photo.module.css";
 import ItemSlidePhoto from "./itemSlide";
+import TrendPhoto from "./commons/Trend/trendPhoto";
 
 interface tabType {
   index: number;
@@ -207,43 +208,43 @@ const PhotoPage = () => {
   const listItem1 = [
     {
       key: 1,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa" />
     },
     {
       key: 2,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     },
     {
       key: 3,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     },
     {
       key: 4,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     },
     {
       key: 5,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     },
     {
       key: 6,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     },
     {
       key: 7,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     },
     {
       key: 8,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     },
     {
       key: 9,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     },
     {
       key: 10,
-      children: () => <ItemSlidePhoto />
+      children: () => <ItemSlidePhoto linkImage="" text="Hoa"/>
     }
   ];
 
@@ -409,35 +410,41 @@ const PhotoPage = () => {
   }, [curentTab]);
   return (
     <section>
-          {/* banner  */}
-          <div className={stylePhoto.photo_banner}>
-            <div className={stylePhoto.banner_img}>
-              <Image src="" alt="" fill />
-              <div className={stylePhoto.banner_infor}>
-                <h2 className={stylePhoto.title}>Khám phá ảnh</h2>
-                <span className={stylePhoto.des}>
-                  Kho ảnh đa dạng và chất lượng cao đang chờ bạn khám phá
-                </span>
-              </div>
-            </div>
+      {/* banner  */}
+      <div className={`${stylePhoto.photo_banner} `}>
+        <div className={stylePhoto.banner_img}>
+          <Image src="" alt="" fill />
+          <div className={stylePhoto.banner_infor}>
+            <h2 className={stylePhoto.title}>Khám phá ảnh</h2>
+            <span className={stylePhoto.des}>
+              Kho ảnh đa dạng và chất lượng cao đang chờ bạn khám phá
+            </span>
           </div>
-          <div
-            style={{
-              marginBottom: "1.25rem"
-            }}
-          >
-            <Slide
-              number={4}
-              space={20}
-              item={listItem1}
-              className={""}
-              isTitle={false}
-              title={""}
-            />
-          </div>
-          {/* list follow name */}
-          {isMobileCheck && <NavMobile />}
-        
+        </div>
+      </div>
+      {/* slide */}
+      <div
+        style={{
+          marginBottom: "1.25rem",
+          marginTop: "0.5rem"
+        }}
+        id="wrapper_slide"
+      >
+        <Slide
+          number={4}
+          space={20}
+          item={listItem1}
+          className={""}
+          isTitle={false}
+          title={""}
+        />
+      </div>
+      {/* list image trend */}
+        <TrendPhoto />
+      {/* list follow name */}
+      {/* {isMobileCheck && (
+          <NavMobile />
+      )} */}
     </section>
   );
 };

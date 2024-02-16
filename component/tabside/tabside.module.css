@@ -1,13 +1,8 @@
 .container {
   padding: 20px 20px 20px 30px;
-  /* width: 280px; */
-  /* width: 20%; */
-  /* min-width: 20%; */
   color: #333;
   min-width: 280px;
-  /* width: 100%; */
-  /* height: calc(100vh - 144px); */
-  /* overflow-y: auto; */
+
 }
 
 .sidebar_fix {
@@ -23,6 +18,10 @@
 
 .sidebar_transform {
   transform: translateX(-100%) !important;
+}
+
+.sidebar_fixed {
+  position: absolute;
 }
 .container::-webkit-scrollbar {
   width: 16px;

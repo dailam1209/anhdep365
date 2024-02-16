@@ -1,0 +1,43 @@
+.wrapper_trend {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.total_trend_image {
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 2.05rem;
+    color: #505050;
+    margin-top: 0.75rem;
+}
+
+.title_trend {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.93rem;
+    color: #333333 ;
+}
+
+.all__image_trend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 2.5rem;
+    /* justify-content: space-between; */
+}
+
+.images_trend{
+    position: relative;
+    height: 344px;
+}
+
+.image_trend {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+@media  screen  and (max-width: 1366px) {
+    
+}
