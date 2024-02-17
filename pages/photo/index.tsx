@@ -442,7 +442,7 @@ const PhotoPage = () => {
       </div>
       {/* list image trend */}
         {/* <TrendPhoto /> */}
-      <Business/>
+      {/* <Business/> */}
     </section>
   );
 };
