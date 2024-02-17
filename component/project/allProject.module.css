@@ -5,7 +5,6 @@
 }
 .title{
     color: #333;
-    font-family: Roboto;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -115,6 +114,30 @@
     font-weight: 700;
     line-height: normal;
 }
+.brand_item{
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #B9B9B9;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+}
+.brand_item:hover{
+    cursor: pointer;
+}
+.brand_color{
+    display: flex;
+}
+.brand_color_item{
+    width: 33.33%;
+    height: 15px;
+}
+.brand_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 17px;
+}
 .more{
     display: flex;
     justify-content: center;
@@ -157,4 +180,23 @@
     .folder_content{
        flex-wrap: wrap;
     }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+.animated{
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
 }

@@ -1,0 +1,67 @@
+.photo_banner {
+  height: 25.6875rem;
+  width: 100%;
+  background: rgba(156, 156, 156, 0.5);
+}
+
+
+.banner_img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner_infor {
+  position: absolute;
+  color: #fff;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0.75rem;
+}
+
+.des {
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* item for slide */
+.item_slide {
+  position: relative;
+  width: 22.5rem !important;
+  height: 11.1875rem;
+  border-radius: 0.75rem;
+  background: rgba(156, 156, 156, 0.5);
+  overflow: hidden;
+}
+
+.text_slide {
+  position: absolute;
+  display: flex;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+

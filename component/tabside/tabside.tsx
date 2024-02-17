@@ -5,12 +5,23 @@ import { Type } from '../interface'
 import { LocationContext } from '@/pages/_app'
 import { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
+import { TabSideContext } from "@/pages/_app";
+import { useMediaQuery } from 'react-responsive'
+
 
 export default function TabSide(){
     const {locationOfSite , setLocationOfSite}:Type = {...useContext(LocationContext)}
     const [animation, setAnimation] = useState<string>('')
+    const {isTabSide, setTabSide} = {...useContext(TabSideContext)}
+    
+      const isTabnetCheck: boolean = useMediaQuery({
+        query: "(max-width: 1025px)"
+      });
+
+     
+    
     return(
-        <div className={styles.container}>
+        <div className={`${styles.container} ${locationOfSite.name == 'sample' &&  styles.sidebar_fix} ${!isTabSide  && styles.sidebar_transform} ${isTabnetCheck ? styles.sidebar_fixed : ''}`}  >
             <div className={styles.user_block}>
                 <Image src={'/tabside/avatar.png'} width={49} height={49} alt='avatar'></Image>
                 <p>Nguyễn Văn Mèo Em</p>

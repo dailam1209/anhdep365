@@ -10,6 +10,6 @@ export default function Brand() {
     }
   },[])
   return (
-    <div style={{width:'85%'}}>Thương hiệu</div>
+    <div style={{width:'80%'}}>Thương hiệu</div>
   )
 }
