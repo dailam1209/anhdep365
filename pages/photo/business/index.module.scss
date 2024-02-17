@@ -1,0 +1,106 @@
+.bussiness_container{
+    width: 100%;
+    .first_map{
+        background: linear-gradient(90deg, #C5FADF 3.88%, #BDF1D7 48.02%, #A9E8C8 95.07%);
+        display: flex;
+        flex-direction: row;
+        height: 411px;
+        .text_box{
+            padding-top: 80px;
+            padding-left: 30px;
+            width: 60%;
+            div:first-child{
+                font-family: Roboto;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 56px;
+                letter-spacing: 0em;
+                text-align: left;
+                padding: 20px;
+            }
+            >div:nth-child(2){
+                font-family: Roboto;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: left;
+                width: 600px;
+                padding: 0 20px;
+            }
+        }
+        .item_right{
+            width: 40%;
+            // padding: 60px 0px;
+            background-image: url("/photo/business/chambi.png");
+            background-repeat: no-repeat;
+            position: relative;
+            .tv{
+                position: absolute;
+                top:70px;
+                right:60px;
+                z-index: 1;
+            }
+            .bright{
+                position: absolute;
+                bottom: 50px;
+                right:10px;
+                z-index: 1;
+            }
+            .goodjob{
+                position: absolute;
+                right: 70px;
+                top:40px;
+                z-index: 1;
+            }
+            .welldone{
+                position: absolute;
+                left:-8px;
+                bottom: 53px;
+                z-index: 1;
+            }
+            .greatjob{
+                position: absolute;
+                left:50px;
+                top: 0px;
+                z-index: 1;
+            }
+            .greatjob_box{
+                position: absolute;
+                left:73px;
+                top: 28px;
+                background: #13B663;
+                width: 61px;
+                height: 67px;
+                z-index: 0;
+            }
+            .bright_box{
+                position: absolute;
+                right:0px;
+                bottom: 125px;
+                background: #13B663;
+                width: 34px;
+                height: 89px;
+                z-index: 0;
+            }
+            .goodjob_box{
+                position: absolute;
+                right:0px;
+                top: 30px;
+                background: #F3EB39;
+                width: 44px;
+                height: 77px;
+                z-index: 0;
+            }
+            .welldone_box{
+                position: absolute;
+                left:30px;
+                bottom: 89px;
+                background: #F3EB39;
+                width: 68px;
+                height: 94px;
+                z-index: 0;
+            }
+        }
+    }
+}

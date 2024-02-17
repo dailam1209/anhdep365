@@ -429,6 +429,7 @@ export default function Sample() {
     >
       <div
         style={{
+          height:"2000px",
           marginLeft: !isTabSide ? "" : "102.6px",
           width: `${isTabSide ? `calc(100% - 202px)` : "calc(100% - 48px)"}`,
           padding: `${isTabSide ? `0` : "1.25rem 1.5rem"}`
