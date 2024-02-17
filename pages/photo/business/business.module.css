@@ -92,6 +92,10 @@
     left: 229.36px;
 }
 
+.image_bottom_laptop {
+    margin-left: 358.75px;
+}
+
 .sticker_good_job {
     position: absolute;
     left: 483.88px;
@@ -103,6 +107,10 @@
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.icon_right_top  {
+    position: relative;
 }
 
 .paper_right_top {

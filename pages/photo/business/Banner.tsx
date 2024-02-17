@@ -14,7 +14,12 @@ const Banner = () => {
         </p>
       </div>
       {/* icon */}
-      <div className={styles.icons}>
+      <div className={styles.icons} style={{
+        backgroundImage: `url('/photo/business/dot.png')` ,
+        backgroundRepeat: 'space',
+        backgroundPosition: '20px 20px !important',
+        backgroundSize: '10px 10px'
+      }}>
         {/* icon left */}
         <div className={styles.icon_left}>
           {/* top */}
@@ -86,12 +91,22 @@ const Banner = () => {
               objectFit="cover"
               objectPosition="center"
             />
+            <Image
+              className={styles.image_bottom_laptop}
+              src="/photo/business/sticker-bright.png"
+              alt="paper"
+              width={102}
+              height={107}
+              objectFit="cover"
+              objectPosition="center"
+            />
           </div>
         </div>
 
         {/* icon right */}
         <div className={styles.icon_right}>
           {/* top */}
+          <div className={styles.icon_right_top}>
           <Image
             className={styles.paper_right_top}
             src="/photo/business/paper-yellow.png"
@@ -101,6 +116,8 @@ const Banner = () => {
             objectFit="cover"
             objectPosition="center"
           />
+          </div>
+          
           {/* bottom */}
           <div className={styles.icon_right_bottom}>
             <Image
@@ -112,7 +129,7 @@ const Banner = () => {
               objectFit="cover"
               objectPosition="center"
             />
-            <Image
+            {/* <Image
               className={styles.sticker_bright}
               src="/photo/business/sticker-bright.png"
               alt="sticker-bright"
@@ -120,7 +137,7 @@ const Banner = () => {
               height={107}
               objectFit="cover"
               objectPosition="center"
-            />
+            /> */}
           </div>
         </div>
       </div>
