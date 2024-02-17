@@ -26,7 +26,6 @@ export interface numberArrow {
 const Slide: React.FC<numberArrow> = ({ number, space, item, className, isTitle, title }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const {isTabSide, setTabSide} = {...useContext(TabSideContext)};
-  console.log('item', item[1]);
  
 
   return (
@@ -58,7 +57,6 @@ const Slide: React.FC<numberArrow> = ({ number, space, item, className, isTitle,
           speed={600}
           onActiveIndexChange={(e) =>{
             setActiveIndex(e.activeIndex);
-            console.log(e.activeIndex);
           }}
           navigation={{
             prevEl: `.prev-${number}`,

@@ -24,7 +24,7 @@ const listBrand:BrandType[] = []
 //     }
 //   )
 // }
-export function Brand(){
+export function Brand () {
     const brandRef:any = useRef(null)
     const brandItemRef:any = useRef(null)
     const [brandDimension, setBrandDimension] = useState<BrandDimensionType>({

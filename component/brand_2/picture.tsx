@@ -53,11 +53,8 @@ export function Picture(){
     const handlePreView =  (item:typeImage,e:any)=>{
         setCurrentImage(item)
         window.scrollTo({top:e.target?.offsetTop,left:0,behavior:'smooth'})
-        // setMarginTop(e.target?.offsetTop)
-        // console.log(e.target?.offsetTop);
     }
     const handleLoadDone = (index:number) =>{
-        console.log(index);
         
     }
     useEffect(()=>{

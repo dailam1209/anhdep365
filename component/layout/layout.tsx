@@ -1,4 +1,4 @@
-import { ReactElement, useContext, useEffect } from "react";
+import { ReactElement, useContext, useEffect, useState } from "react";
 import { Header } from "../header/header";
 import Footer from "../footer/footer";
 import TabSide from "../tabside/tabside";
@@ -8,6 +8,7 @@ import { TabSideContext } from "@/pages/_app";
 import { useRouter } from "next/router";
 import { LocationContext } from '@/pages/_app'
 import { Type } from '../interface'
+import { usePathname } from 'next/navigation'
 
 
 const roboto = Roboto({ 
@@ -16,6 +17,8 @@ const roboto = Roboto({
     subsets: ['latin']
   })
 export default function Layout({children}:{children: ReactElement}){
+    const pathname = usePathname()
+    const [isNavScroll, setIsNavScroll ] = useState<Boolean>(false);
     const {isTabSide, setTabSide} = {...useContext(TabSideContext)}
     const {locationOfSite , setLocationOfSite}:Type = {...useContext(LocationContext)}
     const router  = useRouter()
@@ -23,14 +26,19 @@ export default function Layout({children}:{children: ReactElement}){
         if(window.innerWidth < 800){
             setTabSide(false)
           }
+          if(pathname && pathname?.includes('/templates')) {
+           setIsNavScroll(true);
+          }
     },[router])
     return(
         <main className={roboto.className}>
             <Header/>
             <NestLayout>
                 <>
-                    {isTabSide && locationOfSite.name == 'home' || isTabSide && locationOfSite.name == 'project' ? <TabSide/> : '' }
-                    {locationOfSite.name == 'sample' && <TabSide/> }
+                { !isNavScroll ? <TabSide/> : '' }
+
+                    {/* {isTabSide && locationOfSite.name == 'home' || isTabSide && locationOfSite.name == 'project' ? <TabSide/> : '' } */}
+                    {  isNavScroll && <TabSide/> }
                     {children}
                 </>
             </NestLayout>

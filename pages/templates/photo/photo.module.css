@@ -1,0 +1,151 @@
+.photo_banner {
+  height: 25.6875rem;
+  width: 100%;
+  background: rgba(156, 156, 156, 0.5);
+}
+
+
+.banner_img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner_infor {
+  position: absolute;
+  color: #fff;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0.75rem;
+}
+
+.des {
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* item for slide */
+.item_slide {
+  position: relative;
+  width: 22.5rem !important;
+  height: 11.1875rem;
+  border-radius: 0.75rem;
+  background: rgba(156, 156, 156, 0.5);
+  overflow: hidden;
+}
+
+.text_slide {
+  position: absolute;
+  display: flex;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+/* trend */
+.wrapper_trend {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.total_trend_image {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.05rem;
+  color: #505050;
+  margin-top: 0.75rem;
+}
+
+.title_trend {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.93rem;
+  color: #333333 ;
+}
+
+.all__image_trend {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 36px; */
+  /* justify-content: space-between; */
+  margin-top: 2.5rem;
+}
+
+.images_trend{
+  position: relative;
+  height: 344px;
+  max-width: fit-content;
+}
+
+.image_trend {
+  object-fit: cover;
+width: 100%;
+height: 100%;
+vertical-align: middle;
+  border-radius: 8px;
+}
+
+
+.image_trend img {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  background: red;
+}
+
+
+.image_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.image_gallery > li {
+  height: 344px;
+  cursor: pointer;
+  position: relative;
+  flex: 1 1 auto;
+  list-style: none;
+}
+
+
+
+.image_gallery li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 8px;
+}
+
+
+@media  screen  and (max-width: 1366px) {
+  .images_trend{
+      display: flexbox;
+      flex-basis: auto;
+  }
+}
+

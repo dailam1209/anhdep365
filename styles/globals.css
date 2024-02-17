@@ -17,6 +17,49 @@ a{
 
 /* photo */
 
-#wrapper_slide  .swiper-slide  {
-  width: fit-content;
+ .swiper-slide  {
+  width: fit-content !important;
+}
+@media screen and (max-width: 768px) {
+
+  .photo_photo_banner__sCdWh {
+    height: 248px;
+    margin-top: 30.98px;
+  }
+
+  .photo_title__MFGA0 {
+    font-size: 28px !important;
+
+  }
+
+  .photo_des__oVPo1 {
+    font-size: 16px !important;
+    padding: 0 28px;
+    text-align: center;
+  }
+
+  
+
+
+  
+  #wrapper_slide .photo_item_slide__kV7od {
+    width: 125px !important;
+    height: 61.79px;
+  }
+
+  #wrapper_slide .photo_text_slide__Dgp8F {
+    font-size: 16px;
+  }
+
+  .photo_title_trend__rCVZy {
+    font-size: 29px  !important;
+    white-space: nowrap;
+  }
+
+  .photo_total_trend_image__KzxCt {
+    font-size: 16px !important;
+    margin-top: 0rem !important;
+  }
+
+ 
 }
