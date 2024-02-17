@@ -275,7 +275,7 @@ export default function ContentTabSide({ animation }: { animation: string }) {
           {/* detail */}
           <ul className={styles.sidebar__detail}>
             {titleList.map((text, index) => (
-              <li>
+              <li key={index}>
                 <ArrowHaftRight className={undefined} />
                 <p className={styles.sidebar__detail_text}>{text}</p>
               </li>
