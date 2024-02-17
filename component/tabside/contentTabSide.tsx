@@ -261,10 +261,12 @@ export default function ContentTabSide({ animation }: { animation: string }) {
       <>
         <div className={styles.sidebar_example}>
             {/* comback */}
-            <div className={styles.sidebar__comeback}>
-                <ArrowLeft className={``}/>
-                <p className={styles.sidebar__comback_text}>Quay lại trang chủ</p>
-            </div>
+            <Link href={'/'}>
+              <div className={styles.sidebar__comeback}>
+                  <ArrowLeft className={``}/>
+                  <p className={styles.sidebar__comback_text}>Quay lại trang chủ</p>
+              </div>
+            </Link>
             {/* all */}
           <div className={styles.sidebar__current_page}>
             <ExampleAll className={`${styles.sidebar__current_icon}`} />

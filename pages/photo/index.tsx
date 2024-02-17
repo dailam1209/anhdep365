@@ -24,6 +24,7 @@ import NavMobile from "@/commons/navbarMobile/navMobile";
 import stylePhoto from "./photo.module.css";
 import ItemSlidePhoto from "./itemSlide";
 import TrendPhoto from "./commons/Trend/trendPhoto";
+import Business from "./business";
 
 interface tabType {
   index: number;
@@ -440,11 +441,8 @@ const PhotoPage = () => {
         />
       </div>
       {/* list image trend */}
-        <TrendPhoto />
-      {/* list follow name */}
-      {/* {isMobileCheck && (
-          <NavMobile />
-      )} */}
+        {/* <TrendPhoto /> */}
+      <Business/>
     </section>
   );
 };

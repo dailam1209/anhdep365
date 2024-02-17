@@ -183,6 +183,8 @@ border-right: 1px solid #CBCBCB;
   width: 100%;
 }
 
+
+
 .sidebar__comeback {
   display: flex;
   justify-content: left;
@@ -192,7 +194,16 @@ border-right: 1px solid #CBCBCB;
   font-family: Roboto;
   font-size: 1.25rem;
   font-weight: 500;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  padding: 1rem 0rem 1rem 1rem;
 }
+
+
+.sidebar__comeback:hover {
+  background-color: #ebeaea;
+}
+
 
 .sidebar__current_page {
   display: flex;

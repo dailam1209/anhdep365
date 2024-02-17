@@ -11,12 +11,9 @@ import { useMediaQuery } from 'react-responsive'
 
 export default function TabSide(){
     const {locationOfSite , setLocationOfSite}:Type = {...useContext(LocationContext)}
-    console.log('location', locationOfSite.name);
     const [animation, setAnimation] = useState<string>('')
     const {isTabSide, setTabSide} = {...useContext(TabSideContext)}
-    const isMobileCheck: boolean = useMediaQuery({
-        query: "(max-width: 414px)"
-      });
+    
       const isTabnetCheck: boolean = useMediaQuery({
         query: "(max-width: 1025px)"
       });
