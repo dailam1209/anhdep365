@@ -1,6 +1,29 @@
+
+import SlideShow from "../../../component/slideShow/index"
 import s from "./index.module.scss"
 import Image from "next/image"
+
+
 export default function Bussiness(){
+  const listShowData= []
+  for (let index = 0; index < 21; index++) {
+    listShowData?.push(
+      {
+        avatar:'/home/project_img.png',
+        title:'Doccccccccc'
+      }
+    )
+  }
+  const listShowBST= []
+  for (let index = 0; index < 21; index++) {
+    listShowBST?.push(
+      {
+        avatar:'/photo/business/bosuutap.png',
+        title:'Mẫu báo cáo Digital',
+        title2:'25 mục'
+      }
+    )
+  }
     return(
         <div className={s.bussiness_container}>
             <div className={s.first_map}>
@@ -23,6 +46,12 @@ export default function Bussiness(){
                     <div className={s.goodjob_box}></div>
                     <div className={s.welldone_box}></div>
                 </div>
+            </div>
+            <div className={s.second_map}>
+              <SlideShow listShow ={listShowData} heightAva={160} widthAva={171} />
+            </div>
+            <div className={s.second_map}>
+              <SlideShow listShow ={listShowBST} heightAva={260} widthAva={350} />
             </div>
         </div>
     )
