@@ -1,0 +1,52 @@
+.sl_container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    .list_recommend{
+        display: flex;
+        gap: 18px;
+        width: 100%;
+        transition: ease 1000ms; 
+        .recommend_item{
+            .recommend_img{
+                display: flex;
+                padding: 27px 14px 0px 14px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                background: #EDF3FF;
+                margin-bottom: 17px;
+            } 
+            .recommend_text{
+                color: #333;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            } 
+            .recommend_text2{
+                color: #333;
+                font-size: 14x;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                padding-top: 5px;
+            }  
+        }
+    }
+    .pre_button{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transform: rotate(180deg);
+    }
+    .next_button{
+        position: absolute;
+        right: 0px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
