@@ -49,6 +49,28 @@ for (let index = 0; index < 12; index++) {
     }
   )
 }
+
+export const BrandItem = ({data}:{data:BrandType}) => {
+  return(
+    <div className={`${styles.brand_item}`}>
+        <Image src={data?.image} width={258} height={108} alt='logo brand'></Image>
+        <div className={`${styles.brand_color}`}>
+          {
+            data?.color?.split(',')?.map((color:string,index:number)=>{
+              return(
+                <div key={index} className={`${styles.brand_color_item}`} style={{backgroundColor:`${color}`}}>
+                </div>
+              )
+            })
+          }
+        </div>
+        <div className={`${styles.brand_title}`}>
+          <p>{data?.title}</p>
+          <Image src={'/header/dot_more.png'} width={18} height={4} alt=''></Image>
+        </div>
+    </div>
+  )
+}
 export function AllProject(){
     const refDismension:any = useRef(null)
     const refDismensionItem:any = useRef(null)
@@ -145,27 +167,7 @@ export function AllProject(){
         </div>
       )
     }
-    const BrandItem = ({data}:{data:BrandType}) => {
-      return(
-        <div className={`${styles.brand_item}`}>
-            <Image src={data?.image} width={258} height={108} alt='logo brand'></Image>
-            <div className={`${styles.brand_color}`}>
-              {
-                data?.color?.split(',')?.map((color:string,index:number)=>{
-                  return(
-                    <div key={index} className={`${styles.brand_color_item}`} style={{backgroundColor:`${color}`}}>
-                    </div>
-                  )
-                })
-              }
-            </div>
-            <div className={`${styles.brand_title}`}>
-              <p>{data?.title}</p>
-              <Image src={'/header/dot_more.png'} width={18} height={4} alt=''></Image>
-            </div>
-        </div>
-      )
-    }
+   
     return(
         <div className={`${styles.container} ${styles.fadeInRight} ${styles.animated}`}>
             <p className={`${styles.title}`}>Gần đây</p>

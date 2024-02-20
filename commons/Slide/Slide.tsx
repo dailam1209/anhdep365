@@ -21,13 +21,9 @@ export interface numberArrow {
 }
 
 
-
-
 const Slide: React.FC<numberArrow> = ({ number, space, item, className, isTitle, title }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const {isTabSide, setTabSide} = {...useContext(TabSideContext)};
-  console.log('item', item[1]);
- 
 
   return (
     <div>
@@ -41,7 +37,7 @@ const Slide: React.FC<numberArrow> = ({ number, space, item, className, isTitle,
         paddingBottom: "0.5rem",
         width: "100%",
         position: 'relative',
-        // marginRight: '3.18rem'
+        marginRight: '3.18rem'
       }}
       className={`${className}`}
     >
@@ -53,7 +49,7 @@ const Slide: React.FC<numberArrow> = ({ number, space, item, className, isTitle,
         <Swiper
         // spaceBetween={20} for in banner
           spaceBetween={space} // for content
-          loop={true}
+          loop={false}
           slidesPerView="auto"
           speed={600}
           onActiveIndexChange={(e) =>{

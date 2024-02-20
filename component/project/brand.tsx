@@ -14,16 +14,39 @@ interface BrandType{
     title:string
 }
 const listBrand:BrandType[] = []
-// for (let index = 0; index < 12; index++) {
-//   listBrand.push(
-//     {
-//       index:index,
-//       image:'/project/brand_logo.png',
-//       title:'Bộ thương hiệu',
-//       color:'#FF6A6A,#FFF6A3,#6AA6FF'
-//     }
-//   )
-// }
+for (let index = 0; index < 12; index++) {
+  listBrand.push(
+    {
+      index:index,
+      image:'/project/brand_logo.png',
+      title:'Bộ thương hiệu',
+      color:'#FF6A6A,#FFF6A3,#6AA6FF'
+    }
+  )
+}
+
+
+export  const BrandItem = ({data}:{data:BrandType}) => {
+  return(
+    <div className={`${styles.brand_item}`}>
+        <Image src={data?.image} width={258} height={108} alt='logo brand'></Image>
+        <div className={`${styles.brand_color}`}>
+          {
+            data?.color?.split(',')?.map((color:string,index:number)=>{
+              return(
+                <div key={index} className={`${styles.brand_color_item}`} style={{backgroundColor:`${color}`}}>
+                </div>
+              )
+            })
+          }
+        </div>
+        <div className={`${styles.brand_title}`}>
+          <p>{data?.title}</p>
+          <Image src={'/header/dot_more.png'} width={18} height={4} alt=''></Image>
+        </div>
+    </div>
+  )
+}
 export function Brand(){
     const brandRef:any = useRef(null)
     const brandItemRef:any = useRef(null)
@@ -65,27 +88,7 @@ export function Brand(){
           )
         }
       },[brandDimension?.windowWidth])
-    const BrandItem = ({data}:{data:BrandType}) => {
-        return(
-          <div className={`${styles.brand_item}`}>
-              <Image src={data?.image} width={258} height={108} alt='logo brand'></Image>
-              <div className={`${styles.brand_color}`}>
-                {
-                  data?.color?.split(',')?.map((color:string,index:number)=>{
-                    return(
-                      <div key={index} className={`${styles.brand_color_item}`} style={{backgroundColor:`${color}`}}>
-                      </div>
-                    )
-                  })
-                }
-              </div>
-              <div className={`${styles.brand_title}`}>
-                <p>{data?.title}</p>
-                <Image src={'/header/dot_more.png'} width={18} height={4} alt=''></Image>
-              </div>
-          </div>
-        )
-    }
+   
     return(
         <div className={`${styles.container} ${styles.fadeInRight} ${styles.animated}`}>
                 <div className={`${styles.block_title}`}>

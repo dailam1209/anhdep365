@@ -3,6 +3,7 @@ import { LocationContext, TabSideContext } from "./_app"
 import { Type } from "@/component/interface"
 import styles from '../styles/Home.module.css'
 import Image from "next/image"
+import { useMediaQuery } from "react-responsive"
 interface TabItemType{
   index:number,
   image:string,
@@ -110,6 +111,10 @@ export default function Home() {
     setWindowWidth(window.innerWidth)
     // setWindowHeight(window.innerHeight)
   }
+
+  const isTabnetCheck: boolean = useMediaQuery({
+    query: "(max-width: 912px)"
+  });
   useEffect(()=>{
     if(locationOfSite?.name != 'home'){
       setLocationOfSite({name:'home'})
@@ -142,13 +147,10 @@ export default function Home() {
     setItemPerPage(Math.floor(refDismension?.current?.offsetWidth/(refDismensionItem?.current?.offsetWidth+18)))
     setMarginLeft(recentlyItemRef?.current?.offsetLeft - recentlyRef?.current?.offsetLeft)
   },[windowWidth])
-  // useEffect(()=>{
-  //   setMarginLeft(recentlyItemRef?.current?.offsetLeft - recentlyRef?.current?.offsetLeft)
-  // },[itemPerRow])
+
   useEffect(()=>{
     if(ref){
       setPosition(ref?.current?.offsetLeft + ref?.current?.offsetWidth/2 - 8.5)
-
       // animation header
       let startTimestamp:any = null;
       const duration = 800;
@@ -211,7 +213,7 @@ export default function Home() {
     )
   }
   return (
-    <div className={`${styles.container} ${isTabSide ? '' : styles.full_width}`}>
+    <div className={`${styles.container} ${isTabSide ? '' : styles.full_width} ${ isTabnetCheck ? '' : isTabSide ? '' : styles.transform}`}>
       <div className={`${styles.content}`}>
         <div className={`${styles.header}`}>
           <p className={`${styles.slogan}`}>CÙNG PAGE TẠO CV THIẾT KẾ CV DÀNH RIÊNG CHO BẠN!</p>

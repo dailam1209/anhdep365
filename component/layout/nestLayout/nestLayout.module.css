@@ -6,5 +6,11 @@
     width: 100%;
     position: relative ;
     overflow: hidden;
-    /* height: 200vh; */
 }
+
+
+.layout_transform {
+    transform: translateX(-165px);
+}
+
+

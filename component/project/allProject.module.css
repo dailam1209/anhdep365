@@ -63,9 +63,10 @@
     display: flex;
     align-items: center;
     padding: 16px 0px;
+    justify-content: center;
 }
 .block_title p {
-    margin-left: 20px;
+    margin-left: 32px;
 }
 .folder_content{
     display: flex;

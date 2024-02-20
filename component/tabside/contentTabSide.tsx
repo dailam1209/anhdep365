@@ -1,6 +1,6 @@
 import { LocationContext } from "@/pages/_app";
 import styles from "./tabside.module.css";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Type } from "../interface";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +16,8 @@ import {
   UserCreateIcon,
   ArrowLeft
 } from "@/public/tabside/tabside_mau";
+import { usePathname } from 'next/navigation'
+
 
 interface TypeItemCpn {
   icon: string;
@@ -108,6 +110,19 @@ function TabSiteHome() {
   );
 }
 function TabSiteProject() {
+  
+  const { locationOfSite, setLocationOfSite }: Type = {
+    ...useContext(LocationContext)
+  };
+  
+  useEffect(() => {
+    if (locationOfSite?.name != "sample") {
+      setLocationOfSite({ name: "sample" });
+    }
+  }, [locationOfSite.name]);
+
+ 
+
   const data = [
     {
       icon: "/tabside/du_an/project.png",
@@ -223,20 +238,49 @@ function TabSiteProject() {
 }
 
 export default function ContentTabSide({ animation }: { animation: string }) {
+  const [locationCurrent, setLOcationCurrent] = useState<any>('');
+  const [indexCurrent, setIndevCurrent ] = useState<number>(0);
   const { locationOfSite, setLocationOfSite }: Type = {
     ...useContext(LocationContext)
   };
+  const pathname = usePathname()
+
+  useEffect(() => {
+    setLOcationCurrent(pathname);
+  }, [pathname]);
   const titleList = [
-    "Kinh doanh",
-    "Mạng xã hội",
-    "Giáo dục",
-    "Video",
-    "Marketing",
-    "In ấn",
-    "Thiệp và thiệp mời"
+    {
+      'path': 'templates/business',
+      'text': 'Kinh doanh',
+      'number': 1
+    },
+    {
+      'path': 'templates/society',
+      'text': 'Mạng xã hội',
+      'number': 2
+    },
+    {
+      'path': 'templates/education',
+      'text': 'Giáo dục',
+      'number': 3
+    },
+    {
+      'path': 'templates/marketing',
+      'text': 'Marketing',
+      'number': 4
+    },
+    {
+      'path': 'templates/print',
+      'text': 'In ấn',
+      'number': 5
+    },
+    {
+      'path': 'templates/cart-and-invitation',
+      'text': 'Thiệp và thiệp mời',
+      'number': 6
+    }
   ];
 
-  // console.log(animation);
 
   if (locationOfSite?.name == "home") {
     return (
@@ -261,36 +305,45 @@ export default function ContentTabSide({ animation }: { animation: string }) {
       <>
         <div className={styles.sidebar_example}>
             {/* comback */}
-            <Link href={'/'}>
+            <Link href={'/'} >
               <div className={styles.sidebar__comeback}>
                   <ArrowLeft className={``}/>
                   <p className={styles.sidebar__comback_text}>Quay lại trang chủ</p>
               </div>
             </Link>
             {/* all */}
-          <div className={styles.sidebar__current_page}>
+            <Link href={'/templates'}>
+            <div className={`${styles.sidebar__current_page} ${locationCurrent  === '/templates' ? styles.sidebar__current_active : ''}`}>
             <ExampleAll className={`${styles.sidebar__current_icon}`} />
             <p className={styles.sidebar__current_text}>Tất cả các mẫu</p>
           </div>
+            </Link>
+         
           {/* detail */}
           <ul className={styles.sidebar__detail}>
             {titleList.map((text, index) => (
-              <li>
+              <Link href={text.path} >
+            <li key={index} className={`${locationCurrent === (pathname !== '/templates' ? `/${text.path}` : `/templates/${text.path}`) ? styles.sidebar__current_active : ''} ${index === text.number ? styles.sidebar__current_active : ''}`}>
                 <ArrowHaftRight className={undefined} />
-                <p className={styles.sidebar__detail_text}>{text}</p>
+                <p className={styles.sidebar__detail_text}>{text.text}</p>
               </li>
+              </Link>
             ))}
           </ul>
           {/*   */}
           <div className={styles.sidebar__orther}>
-            <div className={`${styles.sidebar__orther_item} `}>
-              <ImageIcon className={`${styles.sidebar__orther_icon}`} />
-              <p className={`${styles.sidebar__orther_text}`}>Ảnh</p>
-            </div>
+            <Link href={'/templates/photo'}>
+              <div className={`${styles.sidebar__orther_item}  ${locationCurrent  === '/templates/photo' ? styles.sidebar__current_active : ''}`}>
+                <ImageIcon className={`${styles.sidebar__orther_icon}`} />
+                <p className={`${styles.sidebar__orther_text}`}>Ảnh</p>
+              </div>
+            </Link>
+            <Link href={'/templates/symbol'}>
             <div className={`${styles.sidebar__orther_item} `}>
               <Symbol className={``} />
               <p className={`${styles.sidebar__orther_text}`}>Biểu tượng</p>
             </div>
+            </Link>
           </div>
           {/* content of you */}
           <div className={styles.sidebar__content_of_you}>
