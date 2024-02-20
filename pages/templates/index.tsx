@@ -73,7 +73,7 @@ export default function Sample() {
         style={{
           height:"max-content",
           margin: `0 2rem`,
-          marginLeft: !isTabSide ? "" : "102.6px",
+          // marginLeft: !isTabSide ? "" : "102.6px",
           width: `${isTabSide ? `calc(100% - 202px)` : "calc(100% - 48px)"}`,
           padding: `${isTabSide ? `0` : isTabnetCheck ? "" : "1.25rem 1.5rem"}`
         }}
