@@ -2,6 +2,9 @@
   padding: 20px 20px 20px 30px;
   color: #333;
   min-width: 280px;
+  height: -webkit-fill-available;
+  transition: all 0.5s;
+  z-index: 100;
 
 }
 
@@ -298,8 +301,20 @@ cursor: pointer;
 }
 
 
+@media screen and (max-width: 1366px) {
+  .container {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    background: white;
+  }
 
-@media screen and (max-width: 800px) {
+ 
+}
+
+
+
+@media screen and (max-width: 911px) {
   .container {
     position: absolute;
     left: 0;
@@ -307,5 +322,9 @@ cursor: pointer;
     background: #fff;
     z-index: 999;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .container {
+
   }
 }
