@@ -64,6 +64,9 @@ export default function Bussiness(){
               <SlideShow padding={false} listShow ={listShowBST} heightAva={260} widthAva={350} />
             </div>
             <div className={s.third_map}>
+              <div className={s.first_title}>
+                Khám phá kho mẫu chất lượng cao cho doanh nghiệp
+              </div>
               <div className={s.body_tmap}>
                 {
                   listShowModel?.map((item,index)=>(
