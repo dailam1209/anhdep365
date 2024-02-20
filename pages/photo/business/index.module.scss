@@ -111,6 +111,7 @@
     .second_map{
         margin-top: 1%;
         max-width: 100%;
+        margin-bottom: 30px;
         .title{
             padding-bottom: 10px;
             font-family: Roboto;
@@ -125,6 +126,14 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        .first_title{
+            font-family: Roboto;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
         .body_tmap{
             display: flex;
             flex-direction: row;
@@ -138,7 +147,686 @@
                     line-height: 23px;
                     letter-spacing: 0em;
                     text-align: left;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}
 
+@media (min-width: 1366px) and (max-width: 1919.5px) {
+    .bussiness_container{
+        width: 96%;
+        display: flex;
+        padding :2%;
+        flex-direction: column;
+        align-items: center;
+        .first_map{
+            background: linear-gradient(90deg, #C5FADF 3.88%, #BDF1D7 48.02%, #A9E8C8 95.07%);
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            .text_box{
+                padding-top: 80px;
+                padding-left: 30px;
+                width: 60%;
+                div:first-child{
+                    font-family: Roboto;
+                    font-size: 48px;
+                    font-weight: 700;
+                    line-height: 56px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    padding: 20px;
+                }
+                >div:nth-child(2){
+                    font-family: Roboto;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    width: 600px;
+                    padding: 0 20px;
+                }
+            }
+            .item_right{
+                width: 40%;
+                background-image: url("/photo/business/chambi.png");
+                background-repeat: repeat;
+                position: relative;
+                .tv{
+                    position: absolute;
+                    top:103px;
+                    right:77px;
+                    z-index: 1;
+                    width: 367px;
+                    height:194px;
+                }
+                .bright{
+                    position: absolute;
+                    bottom: 75px;
+                    right:60px;
+                    z-index: 1;
+                    width: 78px;
+                    height:82px;
+                }
+                .goodjob{
+                    position: absolute;
+                    right: 80px;
+                    top:68px;
+                    z-index: 1;
+                    width: 100px;
+                    height:63px;
+                }
+                .welldone{
+                    position: absolute;
+                    left:10px;
+                    bottom: 15px;
+                    z-index: 1;
+                    width: 43px;
+                    height:62px;
+                }
+                .greatjob{
+                    position: absolute;
+                    left:50px;
+                    top: 0px;
+                    z-index: 1;
+                    width: 42px;
+                    height:58px;
+                }
+                .greatjob_box{
+                    position: absolute;
+                    left:68px;
+                    top: 18px;
+                    background: #13B663;
+                    width: 50px;
+                    height: 67px;
+                    z-index: 0;
+                }
+                .bright_box{
+                    position: absolute;
+                    right:0px;
+                    bottom: 125px;
+                    background: #13B663;
+                    width: 34px;
+                    height: 89px;
+                    z-index: 0;
+                }
+                .goodjob_box{
+                    position: absolute;
+                    right:0px;
+                    top: 30px;
+                    background: #F3EB39;
+                    width: 44px;
+                    height: 77px;
+                    z-index: 0;
+                }
+                .welldone_box{
+                    position: absolute;
+                    left:30px;
+                    bottom: 41px;
+                    background: #F3EB39;
+                    width: 44px;
+                    height: 61px;
+                    z-index: 0;
+                }
+            }
+        }
+        .second_map{
+            margin-top: 1%;
+            max-width: 100%;
+            margin-bottom: 30px;
+            .title{
+                padding-bottom: 10px;
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        .third_map{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .first_title{
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+            .body_tmap{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap:24px;
+                .item{
+                    .title{
+                        font-family: Roboto;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 23px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px) and (max-width:1365.5px){
+    .bussiness_container{
+        width: 96%;
+        display: flex;
+        padding :2%;
+        flex-direction: column;
+        align-items: center;
+        .first_map{
+            background: linear-gradient(90deg, #C5FADF 3.88%, #BDF1D7 48.02%, #A9E8C8 95.07%);
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            .text_box{
+                padding-top: 80px;
+                padding-left: 30px;
+                width: 60%;
+                div:first-child{
+                    font-family: Roboto;
+                    font-size: 35px;
+                    font-weight: 600;
+                    line-height: 41px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+                >div:nth-child(2){
+                    font-family: Roboto;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    width:420px;
+                }
+            }
+            .item_right{
+                width: 50%;
+                background-image: url("/photo/business/chambi.png");
+                background-repeat: repeat;
+                position: relative;
+                .tv{
+                    position: absolute;
+                    top:103px;
+                    right:77px;
+                    z-index: 1;
+                    width: 253px;
+                    height:160px;
+                }
+                .bright{
+                    position: absolute;
+                    bottom: 100px;
+                    right:60px;
+                    z-index: 1;
+                    width: 78px;
+                    height:82px;
+                }
+                .goodjob{
+                    position: absolute;
+                    right: 70px;
+                    top:68px;
+                    z-index: 1;
+                    width: 100px;
+                    height:63px;
+                }
+                .welldone{
+                    position: absolute;
+                    left:45px;
+                    bottom: 45px;
+                    z-index: 1;
+                    width: 43px;
+                    height:62px;
+                }
+                .greatjob{
+                    position: absolute;
+                    left:50px;
+                    top: 0px;
+                    z-index: 1;
+                    width: 42px;
+                    height:58px;
+                }
+                .greatjob_box{
+                    position: absolute;
+                    left:68px;
+                    top: 18px;
+                    background: #13B663;
+                    width: 50px;
+                    height: 67px;
+                    z-index: 0;
+                }
+                .bright_box{
+                    position: absolute;
+                    right:0px;
+                    bottom: 125px;
+                    background: #13B663;
+                    width: 34px;
+                    height: 89px;
+                    z-index: 0;
+                }
+                .goodjob_box{
+                    position: absolute;
+                    right:0px;
+                    top: 30px;
+                    background: #F3EB39;
+                    width: 44px;
+                    height: 77px;
+                    z-index: 0;
+                }
+                .welldone_box{
+                    position: absolute;
+                    left:60px;
+                    bottom: 75px;
+                    background: #F3EB39;
+                    width: 44px;
+                    height: 61px;
+                    z-index: 0;
+                }
+            }
+        }
+        .second_map{
+            margin-top: 1%;
+            max-width: 100%;
+            margin-bottom: 30px;
+            .title{
+                padding-bottom: 10px;
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        .third_map{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .first_title{
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+            .body_tmap{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap:24px;
+                .item{
+                    .title{
+                        font-family: Roboto;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 23px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        padding-top: 5px;
+                    }
+                    .image_model{
+                        width: 224px;
+                        height: 318px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1023.5px){
+    .bussiness_container{
+        width: 96%;
+        display: flex;
+        padding :2%;
+        flex-direction: column;
+        align-items: center;
+        .first_map{
+            background: linear-gradient(90deg, #C5FADF 3.88%, #BDF1D7 48.02%, #A9E8C8 95.07%);
+            display: flex;
+            flex-direction: row;
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            .text_box{
+                padding-top: 80px;
+                padding-left: 30px;
+                width: 50%;
+                div:first-child{
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 41px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+                >div:nth-child(2){
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    width:320px;
+                }
+            }
+            .item_right{
+                width: 50%;
+                background-image: url("/photo/business/chambi.png");
+                background-repeat: repeat;
+                position: relative;
+                .tv{
+                    position: absolute;
+                    top:103px;
+                    right:12px;
+                    z-index: 1;
+                    width: 253px;
+                    height:160px;
+                }
+                .bright{
+                    position: absolute;
+                    bottom: 100px;
+                    right:-3px;
+                    z-index: 1;
+                    width: 78px;
+                    height:82px;
+                }
+                .goodjob{
+                    position: absolute;
+                    right: 0px;
+                    top:68px;
+                    z-index: 1;
+                    width: 100px;
+                    height:63px;
+                }
+                .welldone{
+                    position: absolute;
+                    left:45px;
+                    bottom: 45px;
+                    z-index: 1;
+                    width: 43px;
+                    height:62px;
+                }
+                .greatjob{
+                    position: absolute;
+                    left:50px;
+                    top: 0px;
+                    z-index: 1;
+                    width: 42px;
+                    height:58px;
+                }
+                .greatjob_box{
+                    position: absolute;
+                    left:68px;
+                    top: 18px;
+                    background: #13B663;
+                    width: 50px;
+                    height: 67px;
+                    z-index: 0;
+                }
+                .bright_box{
+                    position: absolute;
+                    right:0px;
+                    bottom: 125px;
+                    background: #13B663;
+                    width: 34px;
+                    height: 89px;
+                    z-index: 0;
+                    display:none;
+                }
+                .goodjob_box{
+                    position: absolute;
+                    right:0px;
+                    top: 30px;
+                    background: #F3EB39;
+                    width: 44px;
+                    height: 77px;
+                    z-index: 0;
+                    display: none;
+                }
+                .welldone_box{
+                    position: absolute;
+                    left:60px;
+                    bottom: 75px;
+                    background: #F3EB39;
+                    width: 44px;
+                    height: 61px;
+                    z-index: 0;
+                }
+            }
+        }
+        .second_map{
+            margin-top: 1%;
+            max-width: 100%;
+            margin-bottom: 30px;
+            .title{
+                padding-bottom: 10px;
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        .third_map{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .first_title{
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+            .body_tmap{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap:24px;
+                .item{
+                    .title{
+                        font-family: Roboto;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 23px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        padding-top: 5px;
+                    }
+                    .image_model{
+                        width: 224px;
+                        height: 318px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 414px) and (max-width: 767.5px){
+    .bussiness_container{
+        width: 96%;
+        display: flex;
+        padding :2%;
+        flex-direction: column;
+        align-items: center;
+        .first_map{
+            background: linear-gradient(90deg, #C5FADF 3.88%, #BDF1D7 48.02%, #A9E8C8 95.07%);
+            display: none;
+            flex-direction: row;
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            .text_box{
+                padding-top: 80px;
+                padding-left: 30px;
+                width: 50%;
+                div:first-child{
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 41px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+                >div:nth-child(2){
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    width:320px;
+                }
+            }
+            .item_right{
+                width: 50%;
+                background-image: url("/photo/business/chambi.png");
+                background-repeat: repeat;
+                position: relative;
+                .tv{
+                    position: absolute;
+                    top:103px;
+                    right:12px;
+                    z-index: 1;
+                    width: 253px;
+                    height:160px;
+                }
+                .bright{
+                    position: absolute;
+                    bottom: 100px;
+                    right:-3px;
+                    z-index: 1;
+                    width: 78px;
+                    height:82px;
+                }
+                .goodjob{
+                    position: absolute;
+                    right: 0px;
+                    top:68px;
+                    z-index: 1;
+                    width: 100px;
+                    height:63px;
+                }
+                .welldone{
+                    position: absolute;
+                    left:45px;
+                    bottom: 45px;
+                    z-index: 1;
+                    width: 43px;
+                    height:62px;
+                }
+                .greatjob{
+                    position: absolute;
+                    left:50px;
+                    top: 0px;
+                    z-index: 1;
+                    width: 42px;
+                    height:58px;
+                }
+                .greatjob_box{
+                    position: absolute;
+                    left:68px;
+                    top: 18px;
+                    background: #13B663;
+                    width: 50px;
+                    height: 67px;
+                    z-index: 0;
+                }
+                .bright_box{
+                    position: absolute;
+                    right:0px;
+                    bottom: 125px;
+                    background: #13B663;
+                    width: 34px;
+                    height: 89px;
+                    z-index: 0;
+                    display:none;
+                }
+                .goodjob_box{
+                    position: absolute;
+                    right:0px;
+                    top: 30px;
+                    background: #F3EB39;
+                    width: 44px;
+                    height: 77px;
+                    z-index: 0;
+                    display: none;
+                }
+                .welldone_box{
+                    position: absolute;
+                    left:60px;
+                    bottom: 75px;
+                    background: #F3EB39;
+                    width: 44px;
+                    height: 61px;
+                    z-index: 0;
+                }
+            }
+        }
+        .second_map{
+            margin-top: 1%;
+            max-width: 100%;
+            margin-bottom: 30px;
+            .title{
+                padding-bottom: 10px;
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        .third_map{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .first_title{
+                font-family: Roboto;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 42px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+            .body_tmap{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap:24px;
+                .item{
+                    .title{
+                        font-family: Roboto;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 23px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        padding-top: 5px;
+                    }
+                    .image_model{
+                        width: 224px;
+                        height: 318px;
+                    }
                 }
             }
         }
