@@ -3,10 +3,17 @@
     padding: 0px 35px 60px 35px;
     box-sizing: border-box;
 }
+
+
 .full_width{
     width: 100%;
     box-sizing: border-box;
     padding: 0px 200px 60px 200px;
+    transition: all 0.5s;
+}
+
+.transform {
+    transform: translateX(-165px);
 }
 /* .content{
     background-color: red;
@@ -238,12 +245,13 @@
         gap: 10px;
     }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:911px) {
     .list_recently{
         gap: 20px;
     }
     .container{
-        width: 100%;
+        width: calc(100% - 48px);
         padding: 0px 24px 60px 24px;
     }
+    
 }

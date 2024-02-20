@@ -1,0 +1,41 @@
+.container{
+    width: calc(100% - 330px);
+    transition: all 0.5s;
+}
+
+.container_width{
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.full_width{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.transform {
+    transform: translateX(-165px);
+}
+
+@media only screen and (max-width: 1366px) {
+    .list_item {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .transform {
+        transform: translateX(0px);
+    }
+}
+
+@media only screen and (max-width: 911px) {
+    .container {
+        width: 100% !important;
+    }
+
+    .list_item {
+        display: flex;
+        justify-content: center;
+    }
+}
