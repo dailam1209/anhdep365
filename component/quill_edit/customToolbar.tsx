@@ -30,6 +30,7 @@ const CustomToolbar = () => (
             return formatData?.options
               ? renderOptions(formatData)
               : renderSingle(formatData);
+              
           })}
         </span>
       );
