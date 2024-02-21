@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Down, Plus, Upload } from "@/public/brand";
 import styles from "./create.module.css";
+import { ItemOfLogo } from "./items";
 
 interface LogosProps {
   listLogo: any;
@@ -46,11 +47,24 @@ export const Logos: React.FC<LogosProps> = ({ listLogo }) => {
         <input ref={uploadImageRef} type="file" id="imgupload" style={{
             display: 'none'
         }}/>
-        <div className={styles.logo__upload} onClick={() => uploadImageRef.current.click() }>
+        {/* <div className={styles.logo__upload} onClick={() => uploadImageRef.current.click() }>
           <Upload className={undefined} />
           <p className={styles.logo__upload_title}>
             Thêm logo hoặc chỉ cần kéo-thả logo
           </p>
+         
+         
+        </div> */}
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '40px',
+        }}>
+        {
+ [1,1,1,1,1,1,1,1].map((item, index) => (
+  <ItemOfLogo/>
+  ))
+          }
         </div>
       </div>
     </div>

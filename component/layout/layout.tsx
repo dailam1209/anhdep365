@@ -21,6 +21,7 @@ export default function Layout({ children }: { children: ReactElement }) {
   const { locationOfSite, setLocationOfSite }: Type = {
     ...useContext(LocationContext)
   };
+  const currentWidthNavRef = useRef();
   const isTabnetCheck: boolean = useMediaQuery({
     query: "(max-width: 912px)"
   });
@@ -40,12 +41,30 @@ export default function Layout({ children }: { children: ReactElement }) {
           {locationOfSite.name == "home" ||
           locationOfSite.name == "project" ||
           locationOfSite.name == "brand" ? (
-            <TabSide/>
+            <div ref={currentWidthNavRef}>
+              <TabSide />
+            </div>
           ) : (
             ""
           )}
-        {locationOfSite.name == 'sample'  && <TabSide/> }
-              {children}
+          {locationOfSite.name == "sample" && (
+            <div ref={currentWidthNavRef}>
+              <TabSide />
+            </div>
+          )}
+          <div
+            style={{
+              marginTop: "30px",
+              marginLeft: isTabSide ? locationOfSite.name === "home" ? "0px" : "331px" : '0px',
+              width: isTabSide
+                ? `calc(100% - 331px)`
+                : "100%",
+              transition: "all 0.5s",
+              
+            }}
+          >
+            {children}
+          </div>
         </>
       </NestLayout>
       <Footer />

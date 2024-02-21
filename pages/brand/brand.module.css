@@ -1,6 +1,7 @@
 .container{
-    width: calc(100% - 330px);
     transition: all 0.5s;
+    width: 100%;
+    background-color: red;
 }
 
 .container_width{

@@ -48,13 +48,22 @@ for (let index = 0; index < 25; index++) {
   )
 }
   useEffect(()=>{
-    if(locationOfSite?.name != 'brand'){
+    if(locationOfSite?.name !== 'brand'){
       setLocationOfSite({name:'brand'})
     }
   },[])
   return (
-    <div className={`${isTabnetCheck ? styles.container : styles.container_width} ${isTabSide ? '' : styles.full_width} ${ isTabnetCheck ? '' : isTabSide ? '' : styles.transform}`}>
+
+    <div style={{
+      marginLeft: isTabSide ? '-331px' : '-165px',
+      transition: 'all 0.5s',
+      justifyContent:   'center',
+      display: 'flex',
+      alignItems: 'center',
+    }}>
       <ItemBrand/>
     </div>
+    // <div className={`${isTabnetCheck ? styles.container : styles.container_width} ${isTabSide ? '' : styles.full_width} ${ isTabnetCheck ? '' : isTabSide ? '' : styles.transform}`}>
+    // </div>
   )
 }
