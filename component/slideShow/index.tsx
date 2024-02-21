@@ -6,14 +6,13 @@ interface IlistShow{
     avatar:string;
     title2?:string;
 }
-const SlideShow=({listShow ,widthAva ,heightAva } : {listShow: IlistShow[],widthAva:number,heightAva:number }) =>{
+const SlideShow=({listShow ,widthAva ,heightAva, padding } : {listShow: IlistShow[],widthAva:number,heightAva:number,padding:boolean }) =>{
     const refDismension:any = useRef(null)
     const refDismensionItem:any = useRef(null)
     const [dimension, setDimension] = useState<number>(0)
     const [page,setPage] = useState<number>(0)
     const [itemPerPage,setItemPerPage] = useState<number>(0)
     const [windowWidth, setWindowWidth] = useState<number>(0)
- 
     const handleScrollLeft = () => {
         setPage(page-1) 
         setWindowWidth(window.innerWidth)
@@ -36,10 +35,10 @@ const SlideShow=({listShow ,widthAva ,heightAva } : {listShow: IlistShow[],width
         setDimension(Math.floor(refDismension?.current?.offsetWidth/(refDismensionItem?.current?.offsetWidth+18))*(refDismensionItem?.current?.offsetWidth+18))
         setItemPerPage(Math.floor(refDismension?.current?.offsetWidth/(refDismensionItem?.current?.offsetWidth+18)))
       },[windowWidth])
-    const RecommendItem = ({data ,index, widthAvatar, heightAvatar}:{data:IlistShow ,index:number, widthAvatar:number, heightAvatar:number}) => {
+    const RecommendItem = ({data ,index, widthAvatar, heightAvatar, padding}:{data:IlistShow ,index:number, widthAvatar:number, heightAvatar:number ,padding :boolean}) => {
         return(
           <div ref={refDismensionItem} key={index} className={s.recommend_item}>
-            <div className={s.recommend_img}>
+            <div className={`${padding ? s.recommend_img : s.recently_img2}`}>
               <Image src={data?.avatar} alt={data?.title} width={widthAvatar} height={heightAvatar}></Image>
             </div>
             <p className={s.recommend_text}>{data?.title}</p>
@@ -54,7 +53,7 @@ const SlideShow=({listShow ,widthAva ,heightAva } : {listShow: IlistShow[],width
                 listShow?.map((item,index)=>{
                     return(
                         <div key={index}>
-                            <RecommendItem index={index} data={item} widthAvatar={widthAva} heightAvatar={heightAva}></RecommendItem>
+                            <RecommendItem padding={padding} index={index} data={item} widthAvatar={widthAva} heightAvatar={heightAva}></RecommendItem>
                         </div>
                     )
                 })

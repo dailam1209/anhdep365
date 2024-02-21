@@ -250,32 +250,32 @@ export default function ContentTabSide({ animation }: { animation: string }) {
   }, [pathname]);
   const titleList = [
     {
-      'path': 'templates/business',
+      'path': 'business',
       'text': 'Kinh doanh',
       'number': 1
     },
     {
-      'path': 'templates/society',
+      'path': 'society',
       'text': 'Mạng xã hội',
       'number': 2
     },
     {
-      'path': 'templates/education',
+      'path': 'education',
       'text': 'Giáo dục',
       'number': 3
     },
     {
-      'path': 'templates/marketing',
+      'path': 'marketing',
       'text': 'Marketing',
       'number': 4
     },
     {
-      'path': 'templates/print',
+      'path': 'print',
       'text': 'In ấn',
       'number': 5
     },
     {
-      'path': 'templates/cart-and-invitation',
+      'path': 'cart-and-invitation',
       'text': 'Thiệp và thiệp mời',
       'number': 6
     }
@@ -324,8 +324,8 @@ export default function ContentTabSide({ animation }: { animation: string }) {
           {/* detail */}
           <ul className={styles.sidebar__detail}>
             {titleList.map((text, index) => (
-              <Link href={text.path} >
-            <li key={index} className={`${locationCurrent === (pathname !== '/templates' ? `/${text.path}` : `/templates/${text.path}`) ? styles.sidebar__current_active : ''} ${index === text.number ? styles.sidebar__current_active : ''}`}>
+              <Link key={index} href={`/templates/${text.path}`} >
+            <li  className={`${locationCurrent === (pathname !== '/templates' ? `/${text.path}` : `/templates/${text.path}`) ? styles.sidebar__current_active : ''} ${index === text.number ? styles.sidebar__current_active : ''}`}>
                 <ArrowHaftRight className={undefined} />
                 <p className={styles.sidebar__detail_text}>{text.text}</p>
               </li>
