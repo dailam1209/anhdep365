@@ -57,30 +57,8 @@ export default function Sample() {
   });
 
   return (
-    <div
-      ref={boxRightRef}
-      style={{
-        width: `${isTabSide  ? isTabnetCheck ? "100%" : `calc(100% - 165px)` : "100%"}`,
-        padding: `${isTabSide ? `0` : isTabnetCheck ? "" : "0 5.19rem"}`,
-        paddingTop: "1rem",
-        marginLeft:   !isTabSide  ?  "" :   "331px" 
-      }}
-      className={`${styles.animation_box} ${
-        !isTabSide ? styleSlide.hidden_sidebar : ""
-      }`}
-    >
-      <div
-        style={{
-          height:"max-content",
-          margin: `0 2rem`,
-          // marginLeft: !isTabSide ? "" : "102.6px",
-          width: `${isTabSide ? `calc(100% - 202px)` : "calc(100% - 48px)"}`,
-          padding: `${isTabSide ? `0` : isTabnetCheck ? "" : "1.25rem 1.5rem"}`
-        }}
-        className={styles.animation_box}
-      >
-       <FirstTemplate/>
-      </div>
-    </div>
+    <>
+    <FirstTemplate/>
+    </>
   );
 }

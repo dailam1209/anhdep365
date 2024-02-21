@@ -303,6 +303,8 @@ export default function ContentTabSide({ animation }: { animation: string }) {
   if (locationOfSite?.name == "sample") {
     return (
       <>
+      <div className={`${styles.animated} ${styles.fadeInRight}`}>
+
         <div className={styles.sidebar_example}>
             {/* comback */}
             <Link href={'/'} >
@@ -376,6 +378,7 @@ export default function ContentTabSide({ animation }: { animation: string }) {
                     <p>Thùng rác</p>
                 </div>
             </div> */}
+        </div>
         </div>
       </>
     );

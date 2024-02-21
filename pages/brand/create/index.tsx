@@ -6,8 +6,8 @@ import { Logos } from './logos';
 import { BrandOfYou, Edit, Plus } from '@/public/brand'
 import { useMediaQuery } from 'react-responsive';
 import { TabSideContext } from '@/pages/_app';
-import TrendPhoto from '@/pages/photo/commons/Trend/trendPhoto';
-import PhotoPage from '@/pages/photo';
+import Color from './color';
+import Font from './font';
 
 export default function  CreateBrand  ()  {
   const [openAdd, setOpenAdd ] = useState<Boolean>(false);
@@ -38,6 +38,11 @@ export default function  CreateBrand  ()  {
           </div>
         </div>
           <Logos listLogo={logos}/>
+          <Color/>
+          <Font/>
+          <Logos listLogo={`${logos} ${styles.brand__color}`}/>
+          <Logos listLogo={`${logos} ${styles.brand__color}`}/>
+          <Logos listLogo={`${logos} ${styles.brand__color}`}/>
       </div>
     </div>
   )
