@@ -1,0 +1,31 @@
+.society_container{
+    width:96% ;
+    .first_map{
+        display: flex;
+        flex-direction: row;
+        gap :24px;
+        background: #F0D4D1;
+        padding :10px;
+        border-radius: 10px;
+        
+        .f_text{
+            width: 50%;
+            >div:first-child{
+                font-family: Roboto;
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 56px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+            >div:nth-child(2){
+                font-family: Roboto;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: left;
+        }
+        }
+    }
+}

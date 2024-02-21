@@ -1,19 +1,19 @@
 import { ReactElement, useContext, useEffect, useRef, useState } from "react";
 import { Type } from "@/component/interface";
 import { LocationContext } from "../_app";
-import Slide from "@/commons/slide/Slide";
+// import Slide from "@/commons/slide/Slide";
 import { useMediaQuery } from "react-responsive";
 import { TabSideContext } from "@/pages/_app";
 import styles from "../../commons/Slide/slide.module.css";
-import Banner from "@/commons/banner/banner";
+// import Banner from "@/commons/banner/banner";
 
 import { Folder } from "@/component/project/folder";
 import stylesProject from "../../pages/projects/project.module.css";
 import Image from "next/image";
 // import SlideFollowName from "@/commons/SlideFllowName/slideFollowName";
-import ItemSamepleContentExample from "@/commons/slide/itemSampleExample";
-import Item from "@/commons/slide/Item";
-import ItemSampleFlow from "@/commons/slide/itemSampleFlow";
+// import ItemSamepleContentExample from "@/commons/slide/itemSampleExample";
+// import Item from "@/commons/slide/Item";
+// import ItemSampleFlow from "@/commons/slide/itemSampleFlow";
 import styleSlide from "../../commons/Slide/slide.module.css";
 import NavMobile from "@/commons/navbarMobile/navMobile";
 import FirstTemplate from "./firstTemplate";
