@@ -2,9 +2,12 @@ import React, { useRef, useState } from "react";
 import styles from "./create.module.css";
 import { Delete, Down, Edit, Plus } from "@/public/brand";
 import { Input } from "antd";
+import EditFront from "./editFont";
+import Editor from "@/component/quill_edit/edit";
 
 const Font = () => {
   const [number, setNumber] = useState<number>(0);
+  const [ open, setOpen ] = useState(false)
   const [ activeInput, setActiveInput ] = useState<number>(0);
   const arrayInput = [1, 1, 1, 1, 1, 1, 1, 1];
   const uploadImageRef = useRef();
@@ -15,7 +18,9 @@ const Font = () => {
         <div className={styles.logo__des}>
           {/* left */}
           <div className={styles.des_left}>
-            <Down className={undefined} />
+          <div onClick={() => setOpen(!open)} className={`${styles.drop_left} ${open ? styles.drop_left_animation : ''}`}>
+              <Down className={undefined} />
+            </div>
             <div className={styles.des_left_infor}>
               <span className={styles.des_left_title}>Phông chữ</span>
             </div>
@@ -27,7 +32,9 @@ const Font = () => {
           </div>
         </div>
         {/* upload */}
-        <div className={styles.color_wrap_input}>
+        <div className={`${styles.color_wrap_input} ${styles.color_wrap_action} `} style={{
+            display: open ? 'flex' : 'none'
+          }}>
           {arrayInput.map((input, index) => (
             <Input
               className={styles.brand_input}
@@ -91,6 +98,7 @@ const Font = () => {
           <p className={styles.bottom_input}>Quản lý phông chữ đã tải lên</p>
         </div>
       </div>
+      <Editor/>
     </div>
   );
 };

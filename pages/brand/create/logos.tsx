@@ -23,6 +23,7 @@ const LogoItem:React.FC<LogoItemProps> = ({}) => {
 
 export const Logos: React.FC<LogosProps> = ({ listLogo }) => {
   const [number, setNumber] = useState<number>(0);
+  const [ open, setOpen ] = useState(false);
   const [ uploadImageRef, setUploadImageRef ] = useState<any>([]);
   return (
     <div className={styles.logo}>
@@ -31,7 +32,9 @@ export const Logos: React.FC<LogosProps> = ({ listLogo }) => {
         <div className={styles.logo__des}>
           {/* left */}
           <div className={styles.des_left}>
-            <Down className={undefined} />
+          <div onClick={() => setOpen(!open)} className={`${styles.drop_left} ${open ? styles.drop_left_animation : ''}`}>
+              <Down className={undefined} />
+            </div>
             <div className={styles.des_left_infor}>
               <span className={styles.des_left_title}>Logo</span>
               <span className={styles.des_left_total}>( {number} )</span>
@@ -56,10 +59,10 @@ export const Logos: React.FC<LogosProps> = ({ listLogo }) => {
          
         </div> */}
         <div style={{
-          display: 'flex',
           flexWrap: 'wrap',
           gap: '40px',
-        }}>
+          display: open ? 'flex' : 'none'
+        }} className={`${styles.color_wrap_action} `} >
         {
  [1,1,1,1,1,1,1,1].map((item, index) => (
   <ItemOfLogo/>
