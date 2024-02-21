@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: ReactElement }) {
   const { locationOfSite, setLocationOfSite }: Type = {
     ...useContext(LocationContext)
   };
-  const currentWidthNavRef = useRef();
+  const currentWidthNavRef = useRef(null);
   const isTabnetCheck: boolean = useMediaQuery({
     query: "(max-width: 912px)"
   });
