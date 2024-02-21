@@ -157,6 +157,11 @@
   margin-left: 17px;
 }
 
+.action__box {
+  display: flex;
+  gap: 64px;
+}
+
 .action_add {
   height: 182px;
   background-color: #f2f3f5;
@@ -165,17 +170,90 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   padding-left: 80px;
+  padding-top: 28px;
+  flex-wrap: wrap;
+  gap: 64px;
+  border-radius: 8px;
+  overflow: hidden;
 
 }
 
 .action_add_all {
   width: 89px;
+  position: relative;
 }
 
+
+
+.action_color {
+  width: 100%;
+  height: 100%;
+  background-color: #5265D7;
+  /* border-radius: 8px; */
+  transition: all 0.3s;
+}
+
+
+.action_color_close {
+  position: relative;
+}
+.action_close {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  display: none;
+}
+.action_color_close .action_title {
+  color: #333333;
+  font-weight: 500;
+}
+
+.action__color_toolkit {
+  position: absolute;
+  top: 104px;
+  transform: translateX(-4px);
+  background-color: #2D2D2D;
+  border-radius: 12px;
+  color: #FFFF;
+  padding: 10px 20px;
+  display: none;
+}
+
+.action__color_toolkit_add {
+  transform: translateX(-20%);
+}
+
+.action__color_toolkit span {
+  white-space: nowrap;
+}
+
+.drow_top {
+  position: absolute;
+  top: -14px;
+  right: 0;
+  left: 0;
+  align-items: center;
+}
+
+
+.action_add_all_color:hover .action_color {
+  display: flex;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+}
+
+
+.action_add_all_color:hover .action_close {
+  display: block;
+}
+
+.action_add_all:hover .action__color_toolkit  {
+  display: block;
+}
 .action_add_click {
   width: 89px;
   height: 89px;
@@ -184,9 +262,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 28px;
   margin-bottom: 12px;
+  user-select: none;
+  cursor: pointer;
 
+}
+
+.action_add_click:hover {
+  border:  4px solid #8e9397;
+  width: calc(100% - 8px);
+  height: calc(81px);
+  /* transition: all 0.5s; */
 }
 
 .action_title {
@@ -280,6 +366,21 @@
   top: 50%;
   transform: translateY(-50%);
 
+}
+
+/* @keyframes spinner {
+  from {
+    transform: rotate(-45deg);
+  }
+} */
+
+.drop_left {
+  transition: all 0.3s ;
+  transform: rotate(-90deg);
+}
+
+.drop_left_animation {
+  transform: rotate(0deg);
 }
 
 

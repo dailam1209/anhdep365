@@ -1,0 +1,23 @@
+.font__wrap {
+    display: flex;
+}
+
+.font__edit_icon {
+    padding: 10px;
+    margin: 0 8px;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+}
+
+.font__edit_icon:hover {
+    background-color: #eaecf3;
+}
+
+.hidden_block {
+    display: none !important;
+}
+
+.add_border_top {
+    border-radius: 8px !important;
+  }

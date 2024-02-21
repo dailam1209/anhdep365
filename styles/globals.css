@@ -69,3 +69,48 @@ a{
 
  
 }
+
+.quill  {
+  border-radius: 8px;
+    /* overflow: hidden; */
+    /* border: 1px solid #F2F3F5; */
+}
+
+.ql-container.ql-snow {
+  border: none;
+  transform: translateY(-4px);
+  background-color: #F2F3F5;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  /* border-radius: 8px; */
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+  display: flex;
+  gap: 16px;
+ 
+}
+
+
+
+.ql-toolbar.ql-snow {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex ;
+  height: 77px;
+  align-items: center;
+  background-color: #F2F3F5;
+}
+
+.quill {
+  height: 77px;
+}
+
+.ql-editor p, .ql-editor ol, .ql-editor ul, .ql-editor pre, .ql-editor blockquote, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6  {
+  height: 100%;
+
+}
+.ql-editor p {
+  display: flex !important;
+  align-items: center;
+}
