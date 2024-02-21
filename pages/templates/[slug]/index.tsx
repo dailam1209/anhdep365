@@ -15,10 +15,8 @@ import Item from "@/commons/slide/Item";
 import ItemSampleFlow from "@/commons/slide/itemSampleFlow";
 import styleSlide from "@/commons/Slide/slide.module.css";
 import NavMobile from "@/commons/navbarMobile/navMobile";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 import PhotoPage from "@/pages/photo";
-
-
 
 interface tabType {
   index: number;
@@ -34,7 +32,7 @@ interface DimensionType {
 export default function Sample() {
   const [currentPage, setCurrentPage] = useState(1);
   const boxRightRef = useRef(null);
-  const pathname = usePathname()
+  const pathname = usePathname();
   const ref: any = useRef(null);
   const tabBlockRef: any = useRef(null);
   const [curentTab, setCurrentTab] = useState<number>(0);
@@ -48,36 +46,13 @@ export default function Sample() {
     }
   }, []);
 
-
-
   const isTabnetCheck: boolean = useMediaQuery({
     query: "(max-width: 1024px)"
   });
 
   return (
-    <div
-      ref={boxRightRef}
-      style={{
-        width: `${isTabSide  ? isTabnetCheck ? "100%" : `calc(100% - 165px)` : "100%"}`,
-        padding: `${isTabSide ? `0` : "0 5.19rem"}`,
-        paddingTop: "1rem",
-        marginLeft: !isTabnetCheck ?  !isTabSide  ? "" : "331px" : ''
-      }}
-      className={`${styles.animation_box} ${
-        !isTabSide ? styleSlide.hidden_sidebar : ""
-      }`}
-    >
-      <div
-        style={{
-          marginLeft: !isTabSide ? "" : "102.6px",
-          width: `${isTabSide ? `calc(100% - 202px)` : "calc(100% - 48px)"}`,
-          padding: `${isTabSide ? `0` : "1.25rem 1.5rem"}`
-        }}
-        className={styles.animation_box}
-      >
-        <PhotoPage/>
-         
-      </div>
-    </div>
+    <>
+      <PhotoPage />
+    </>
   );
 }
