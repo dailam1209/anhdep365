@@ -9,6 +9,7 @@ import { useMediaQuery } from 'react-responsive';
 import { LocationContext, TabSideContext } from '@/pages/_app';
 import Color from './color';
 import Font from './font';
+import { ModalAddBrand } from './ModalAddBrand';
 
 interface BrandType{
   index:number,
@@ -25,7 +26,7 @@ interface DesignDimensionType{
 }
 
 export default function  CreateBrand  ()  {
-  const [openAdd, setOpenAdd ] = useState<Boolean>(false);
+  const [openAdd, setOpenAdd ] = useState(false);
   const [ logos, setLogos ] = useState<any>([]);
   const isTabnetCheck: boolean = useMediaQuery({
     query: "(max-width: 912px)"
@@ -56,7 +57,7 @@ export default function  CreateBrand  ()  {
             </div>
             <div className={`${styles.brand__add} ${styles.brand__of_you}`}>
               <Plus className={styles.brand__of_you_icon}/>
-              <span  className={styles.brand__of_you_tilte}>Thêm vào thư mục</span>
+              <span  className={styles.brand__of_you_tilte} onClick={()=>setOpenAdd(true)}>Thêm vào thư mục</span>
             </div>
           </div>
         </div>
@@ -67,6 +68,10 @@ export default function  CreateBrand  ()  {
           <Logos listLogo={`${logos} ${styles.brand__color}`}/>
           <Logos listLogo={`${logos} ${styles.brand__color}`}/>
       </div>
+      <ModalAddBrand
+        isOpen={openAdd}
+        setOpenAdd={setOpenAdd}
+      />
     </div>
   )
 }
