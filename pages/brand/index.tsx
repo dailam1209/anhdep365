@@ -4,7 +4,8 @@ import { LocationContext, TabSideContext } from "../_app"
 import styles from './brand.module.css'
 import { BrandItem } from "@/component/project/allProject"
 import ItemBrand from "./itemBrand"
-import { useMediaQuery } from "react-responsive"
+import { useMediaQuery } from "react-responsive";
+import { usePathname } from 'next/navigation'
 
 interface BrandType{
   index:number,
@@ -32,9 +33,10 @@ export default function Brand() {
     windowWidth:0,
     gap:0,
     marginLeft:0
-  })
-  const brandRef:any = useRef(null)
-  const brandItemRef:any = useRef(null)
+  });
+  const brandRef:any = useRef(null);
+  const brandItemRef:any = useRef(null);
+  const pathname = usePathname()
 
   const listBrand:BrandType[] = []
 for (let index = 0; index < 25; index++) {
@@ -50,19 +52,22 @@ for (let index = 0; index < 25; index++) {
   useEffect(()=>{
     if(locationOfSite?.name !== 'brand'){
       setLocationOfSite({name:'brand'})
+      console.log(locationOfSite?.name);
+      console.log(pathname);
     }
   },[])
   return (
 
     <div style={{
-      marginLeft: isTabSide ? '-331px' : '-165px',
+      marginLeft: !isTabSide ? '0px' : '0px',
       transition: 'all 0.5s',
-      justifyContent:   'center',
-      display: 'flex',
-      alignItems: 'center',
+      // justifyContent:   'center',
+      // display: 'flex',
+      // alignItems: 'center',
     }}>
       <ItemBrand/>
     </div>
+
     // <div className={`${isTabnetCheck ? styles.container : styles.container_width} ${isTabSide ? '' : styles.full_width} ${ isTabnetCheck ? '' : isTabSide ? '' : styles.transform}`}>
     // </div>
   )

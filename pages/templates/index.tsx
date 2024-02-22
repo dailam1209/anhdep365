@@ -1,25 +1,9 @@
 import { ReactElement, useContext, useEffect, useRef, useState } from "react";
 import { Type } from "@/component/interface";
-import { LocationContext } from "../_app";
-// import Slide from "@/commons/slide/Slide";
-import { useMediaQuery } from "react-responsive";
-import { TabSideContext } from "@/pages/_app";
-import styles from "../../commons/Slide/slide.module.css";
-// import Banner from "@/commons/banner/banner";
-
-import { Folder } from "@/component/project/folder";
-import stylesProject from "../../pages/projects/project.module.css";
-import Image from "next/image";
-// import SlideFollowName from "@/commons/SlideFllowName/slideFollowName";
-// import ItemSamepleContentExample from "@/commons/slide/itemSampleExample";
-// import Item from "@/commons/slide/Item";
-// import ItemSampleFlow from "@/commons/slide/itemSampleFlow";
-import styleSlide from "../../commons/Slide/slide.module.css";
-import NavMobile from "@/commons/navbarMobile/navMobile";
+import { LocationContext, TabSideContext } from "../_app";
+import styles from "./template.module.css";
 import FirstTemplate from "./firstTemplate";
-import { usePathname } from 'next/navigation'
-import PhotoPage from "../photo";
-
+import { useDeviceQueries } from "@/commons/response";
 
 
 interface tabType {
@@ -34,31 +18,36 @@ interface DimensionType {
 }
 
 export default function Sample() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const boxRightRef = useRef(null);
-  const ref: any = useRef(null);
-  const tabBlockRef: any = useRef(null);
-  const [curentTab, setCurrentTab] = useState<number>(0);
+  const { isPC, isPCSmall, isTabnet, isTabnetSmall, isMobile } = useDeviceQueries();
+  const { isTabSide, setTabSide } = { ...useContext(TabSideContext) };
   const { locationOfSite, setLocationOfSite }: Type = {
     ...useContext(LocationContext)
   };
-  const { isTabSide, setTabSide } = { ...useContext(TabSideContext) };
+  let marginStyle = '';
+
+  switch (true) {
+    case isPC:
+      marginStyle = isTabSide ? '' : '0 200px';
+      break;
+    case isMobile:
+      marginStyle = '0 16px';
+      break;
+    case isPCSmall:
+      marginStyle = isTabSide ? '0 35px' : '0 83px'
+    default:
+      marginStyle = '';
+  }
   useEffect(() => {
-    console.log('locationOfSite?.name', locationOfSite.name);
     if (locationOfSite?.name != "sample") {
       setLocationOfSite({ name: "sample" });
     }
   }, []);
 
-
-
-  const isTabnetCheck: boolean = useMediaQuery({
-    query: "(max-width: 912px)"
-  });
-
   return (
-    <>
-    <FirstTemplate/>
-    </>
+    <div  className={styles.box__template_content} style={{
+      margin: marginStyle
+    }}>
+      <FirstTemplate/>
+    </div>
   );
 }

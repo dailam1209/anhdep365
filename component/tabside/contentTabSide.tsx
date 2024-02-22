@@ -352,10 +352,11 @@ export default function ContentTabSide({ animation }: { animation: string }) {
 
           <h4 className={styles.sidebar__content_title}>Nội dung của bạn</h4>
           <div className={styles.sidebar__content_all}>
-            <div className={styles.sidebar__content_item}>
+            <Link href={'/templates/create-follow'}><div className={styles.sidebar__content_item}>
               <UserCreateIcon className={``} />
               <p>Creater bạn theo dõi</p>
             </div>
+            </Link>
             <div className={styles.sidebar__content_item}>
               <Start className={``} />
               <p>Đã gắn sao</p>
