@@ -17,6 +17,7 @@ import styleSlide from "@/commons/Slide/slide.module.css";
 import NavMobile from "@/commons/navbarMobile/navMobile";
 import { usePathname } from "next/navigation";
 import PhotoPage from "@/pages/photo";
+import CreateFollow from "../create-follow";
 
 interface tabType {
   index: number;
@@ -52,7 +53,8 @@ export default function Sample() {
 
   return (
     <>
-      <PhotoPage />
+      {/* <PhotoPage /> */}
+      <CreateFollow/>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { ReactElement, useContext, useEffect, useRef } from "react";
+import { ReactElement, useContext, useEffect, useRef, useState } from "react";
 import { Header } from "../header/header";
 import Footer from "../footer/footer";
 import TabSide from "../tabside/tabside";
@@ -10,6 +10,7 @@ import { LocationContext } from "@/pages/_app";
 import { Type } from "../interface";
 import styles from "@/commons/Slide/slide.module.css";
 import { useMediaQuery } from "react-responsive";
+import { usePathname } from "next/navigation";
 
 const roboto = Roboto({
   weight: "400",
@@ -18,49 +19,40 @@ const roboto = Roboto({
 });
 export default function Layout({ children }: { children: ReactElement }) {
   const { isTabSide, setTabSide } = { ...useContext(TabSideContext) };
+  const [ tabNet, setTabNet ] = useState<Boolean>(false);
   const { locationOfSite, setLocationOfSite }: Type = {
     ...useContext(LocationContext)
   };
+  const pathname = usePathname()
   const currentWidthNavRef = useRef(null);
-  const isTabnetCheck: boolean = useMediaQuery({
-    query: "(max-width: 912px)"
-  });
-  const boxRightRef = useRef(null);
-
   const router = useRouter();
   useEffect(() => {
+    console.log(pathname.includes('brand'));
     if (window.innerWidth < 800) {
       setTabSide(false);
     }
   }, [router]);
+
+
   return (
     <main className={roboto.className}>
       <Header />
       <NestLayout>
         <>
-          {locationOfSite.name == "home" ||
-          locationOfSite.name == "project" ||
-          locationOfSite.name == "brand" ? (
-            <div ref={currentWidthNavRef}>
+            <div ref={currentWidthNavRef} style={{
+              position: !isTabSide ? "absolute" : "",
+              left: !tabNet ? "-331px" : ""
+            }}>
               <TabSide />
             </div>
-          ) : (
-            ""
-          )}
-          {locationOfSite.name == "sample" && (
-            <div ref={currentWidthNavRef}>
-              <TabSide />
-            </div>
-          )}
           <div
             style={{
               marginTop: "30px",
-              marginLeft: isTabSide ? locationOfSite.name === "home" ? "0px" : "331px" : '0px',
+              marginLeft: isTabSide ? locationOfSite.name === "home" ||  pathname.includes('brand')  ? "0px" : "331px" : '0px',
               width: isTabSide
-                ? `calc(100% - 331px)`
+                ?  pathname.includes('brand') ?  '100%' :  `calc(100% - 331px)`
                 : "100%",
-              transition: "all 0.5s",
-              
+              transition: "all 0.4s",
             }}
           >
             {children}
