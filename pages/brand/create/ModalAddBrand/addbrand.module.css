@@ -1,0 +1,46 @@
+.title_modal{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.tab_file :first-child {
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+}
+.tab_file :nth-child(2) {
+    text-align: center;
+    width:100%;
+    font-weight: bold;
+}
+.ft_contain{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.file{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.content_title{
+    text-align: start !important;
+    padding-left: 10px;
+    font-weight: 400;
+
+}
+.button_action{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: flex-end;
+}

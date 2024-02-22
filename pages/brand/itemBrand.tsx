@@ -20,7 +20,7 @@ interface DesignDimensionType {
   marginLeft: number;
 }
 const ItemBrand = () => {
-  const itemWidthRef = useRef();
+  const itemWidthRef = useRef(null);
   const { isTabSide, setTabSide } = { ...useContext(TabSideContext) };
   const [widthTitle, setWidthTitle ] = useState(0);
 
