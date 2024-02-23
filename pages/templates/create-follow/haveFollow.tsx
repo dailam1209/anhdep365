@@ -1,15 +1,45 @@
 import { Select } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./createlike.module.css";
 import Image from "next/image";
-import { Clock, DropDowFollow } from '@/public/create_follow'
+import { CheckSelect, Clock, Common, DropDowFollow } from '@/public/create_follow'
 import Dropdown from "antd/es/dropdown/dropdown";
 import ItemFollow from "./itemFollow";
 
+interface ItemProps {
+  icon: any,
+  label: string,
+  isActived: boolean
+}
+
+const Item:React.FC<ItemProps> = ({ icon, label, isActived }) => {
+  return (
+    <div className={styles.select_item}>
+      <div className={styles.select_left}>
+        <div className={styles.select_icon}>
+          {icon}
+        </div>
+        <p className={styles.select_text}>{label}</p>
+      </div>
+      {/* {
+        isActived && <div>
+        <CheckSelect className={``}/>
+      </div>
+      } */}
+      
+    </div>
+  )
+}
+
 const HaveFollow = () => {
   const handleChange = (value: string) => {
-    console.log(`selected ${value}`);
   };
+
+  const options = [
+    { value: "jack", label: <Item icon={<Clock className={styles.clockIcon} />} label={"Gần dây nhất"} isActived={true}/> },
+    { value: "lucy", label: <Item icon={<Common className={styles.clockIcon} />} label={"Phổ biến nhất"} isActived={true}/> },
+  ];
+ 
   return (
     <div className={styles.wrapper__have_follow}>
       <div className={styles.follow_filter}>
@@ -21,17 +51,11 @@ const HaveFollow = () => {
           <div className={styles.box_select}>
             <Select
             suffixIcon={ <DropDowFollow/>}
-              defaultValue="Gần đây nhất"
+              defaultValue={options[0]}
               style={{ width: 120 }}
               onChange={handleChange}
-              options={[
-                { value: "jack", label: "Jack" },
-                { value: "lucy", label: "Gần đây nhất" },
-                { value: "Yiminghe", label: "yiminghe" },
-                { value: "disabled", label: "Disabled", disabled: true }
-              ]}
+              options={options}
             />
-            <Clock className={styles.icon_select}/>
           </div>
         </div>
       </div>

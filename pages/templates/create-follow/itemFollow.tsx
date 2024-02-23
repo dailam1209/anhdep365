@@ -24,7 +24,7 @@ const ItemFollow = () => {
               <p className={styles.actione_text}>Chia sẻ</p>
             </div>
             <div className={`${styles.action_share} ${styles.action_three_dot}`}>
-              <ThreeDotFollow/>
+              <ThreeDotFollow className={undefined}/>
               <div className={styles.box_action_remove}>
                 <p className={styles.action_remove_follow}>Bỏ theo dõi</p>
               </div>

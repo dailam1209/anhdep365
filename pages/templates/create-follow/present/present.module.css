@@ -1,0 +1,73 @@
+.img_present {
+    width: 240px;
+    background-color: #EDF3FF;
+    height: 187px;
+    border-radius: 12px;
+}
+
+.pos_img {
+    position: relative;
+}
+
+.img {
+    margin-top: 34px;
+    margin-left: 16px;
+
+} 
+
+.des_present {
+    margin-top: 17px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.75px;
+}
+
+/* try */
+
+.try_box {
+    margin:  60px 0;
+}
+.try_it_all {
+    display: flex;
+    gap: 31px;
+    cursor: pointer;
+}
+
+.try_follow {
+    height: 180px;
+    background-color: #F3D361;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    border-radius: 8px;
+}
+
+.try_des {
+    margin: 17px 0 17px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.try_text {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.try_action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.try_action_text {
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 400;
+}
+
+.try_img {
+    margin-right: 10px;
+}
