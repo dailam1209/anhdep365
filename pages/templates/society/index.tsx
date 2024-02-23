@@ -6,14 +6,14 @@ import { TabSideContext } from "@/pages/_app";
 export default function MangXaHoi(){
     const { isTabSide, setTabSide } = { ...useContext(TabSideContext) };
     const listShowData= []
-  for (let index = 0; index < 21; index++) {
-    listShowData?.push(
-      {
-        avatar:'/home/project_img.png',
-        title:'Bài đăng instagram'
-      }
-    )
-  }
+    for (let index = 0; index < 21; index++) {
+      listShowData?.push(
+        {
+          avatar:'/home/project_img.png',
+          title:'Bài đăng instagram'
+        }
+      )
+    }
   const listShowModel= []
   for (let index = 0; index < 21; index++) {
     listShowModel?.push(

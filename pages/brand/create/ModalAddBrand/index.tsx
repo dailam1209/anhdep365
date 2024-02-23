@@ -33,7 +33,7 @@ export function ModalAddBrand(props:IAddBrandProps){
     ]
     const FolderAdd=()=>{
         return(
-            <div>
+            <div style={{marginTop:"30px"}}>
                 <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-start"}}  onClick={()=>setFolderChange(false)}>
                     <div style={{width:"auto"}}><LeftOutlined /></div>
                     <div style={{width:"auto",paddingLeft:"20px"}}>{titleFolder}</div>
@@ -87,7 +87,7 @@ export function ModalAddBrand(props:IAddBrandProps){
                     <Button>
                         Thư mục mới
                     </Button>
-                    <Button key="submit" type="primary" onClick={() => {}}>
+                    <Button key="submit" type="primary" onClick={() => {}} disabled={folderChange? false : true}>
                         <PlusOutlined />
                         Thêm bộ thương hiệu
                     </Button>
@@ -102,16 +102,17 @@ export function ModalAddBrand(props:IAddBrandProps){
                 <Tabs
                     defaultActiveKey="1"
                     // onChange={onChange}
-                    className={s.tab_file}
+                    className={folderChange? s.none:s.tabside}
+                    centered
                     size="large"
                     items={[
                     {
-                        label: `Gần Đây`,
+                        label:`Gần Đây`,
                         key: '1',
                         children: folderChange? <FolderAdd/>: <FirstTab/>,
                     },
                     {
-                        label: `Tất cả`,
+                        label:`Tất cả`,
                         key: '2',
                         children:folderChange? <FolderAdd/>: <SecondTab/>,
                     },
