@@ -6,11 +6,16 @@
 
 }
 
+
+
 body {
   box-sizing: border-box;
 }
 .flex{
   display: flex;
+}
+button {
+  cursor: pointer;
 }
 a{
   color: unset;
@@ -123,7 +128,7 @@ a{
 }
 
 #create_follow_wrapper .slide_slide_btn_left__gkKFY.slide_display_block__S_tQI.prev-0 {
-  left: 00% !important;
+  left: 0% !important;
   top: 25%;
 }
 
@@ -133,10 +138,57 @@ a{
 }
 
 #create_follow_wrapper :where(.css-dev-only-do-not-override-1xg9z9n).ant-select-single.ant-select-show-arrow .ant-select-selection-item {
-  padding-left: 3rem;
   font-size: 20px;
   color: #6F7274;
 }
+
+/* change color or scroll tab profile creator */
+
+#profile-creator .project_selected__10wyN {
+  background: #8142F6;
+}
+
+ #profile-creator.project_tab_block__E_wUq li p {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+
+#profile-creator .prevent-select{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#profile-creator :where(.css-dev-only-do-not-override-1xg9z9n).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  height: 50px;
+      display: flex;
+      align-items: center;
+  }
+  
+  #profile-creator  :where(.css-dev-only-do-not-override-1xg9z9n).ant-select .ant-select-arrow {
+  top: 50%;
+  }
+
+  .createlike_box_select__q9ogb {
+    height: 50px;
+  }
+
+
+  #profile-creator  :where(.css-dev-only-do-not-override-1xg9z9n).ant-select-single {
+    height: 50px !important;
+  }
+
+  #profile-creator  :where(.css-dev-only-do-not-override-1xg9z9n).ant-select-single.ant-select-show-arrow .ant-select-selection-item, :where(.css-dev-only-do-not-override-1xg9z9n).ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+    font-size: 20px;
+    color: #000000;
+    
+  }
+
+  #profile-creator :where(.css-dev-only-do-not-override-1xg9z9n).ant-select-single {
+    height: 100%;
+  }
+
+
 
 
 
@@ -161,5 +213,19 @@ a{
 
   #create_follow_wrapper .slide_display_block__S_tQI {
     left: 89.5% !important;
+}
+
+#profile-creator .prevent-select {
+  font-size: 20px;
+}
+
+#profile-creator .project_tab_block__E_wUq li {
+  font-size: 20px;
+}
+
+#profile-creator .createlike_box_select__q9ogb {
+ display: block;
+ height: 50px;
+ margin-bottom: 13px;
 }
 }

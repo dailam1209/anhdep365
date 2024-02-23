@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./createlike.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const SuggetsLike = () => {
   return (
-    <div className={styles.item_user}>
+    <Link href={'/templates/create-follow/present'}>
+      <div className={styles.item_user}>
       {/* image background user */}
       <div className={styles.background_user}>
         {/* background */}
@@ -55,6 +57,8 @@ const SuggetsLike = () => {
         </div>
       </div>
     </div>
+    </Link>
+    
   );
 };
 

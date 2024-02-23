@@ -1,0 +1,278 @@
+.profile_image {
+  position: relative;
+  width: fit-content;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 26px;
+  color: #8e8e8e;
+}
+
+.profile_name {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.profile_mail_number {
+  color: #8e8e8e;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 46.88px;
+}
+
+.action .profile_following {
+    background-color: #F2F3F5 !important;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+}
+
+.remove_follow {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 80px;
+    width: 449px;
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFF;
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.profile_following::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+    width: 400px;
+    left: 0;
+    height: 20px;
+}
+
+.remove_follow span {
+    font-size: 32px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.remove_follow:hover {
+    background-color: #F2F3F5;
+}
+
+.profile_following:hover .remove_follow{
+    display: flex;
+}
+
+.action {
+  display: flex;
+  margin-top: 55.5px;
+  align-items: center;
+}
+
+.action button {
+  color: #ffff;
+  padding: 16px 30px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 82px;
+  background-color: #8142f6;
+  font-size: 32px;
+}
+
+/* content */
+
+.wrapper_content {
+  margin-top: 60px;
+}
+.content_page {
+  width: 100%;
+}
+
+.content_greate {
+  margin-bottom: 60px;
+}
+
+.greate_title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 37.5px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.greate_imgs {
+  display: flex;
+  gap: 60px;
+  /* flex-wrap: wrap; */
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.greate_imgs::-webkit-scrollbar {
+  display: none;
+}
+
+.content_img {
+  position: relative;
+  width: 204px;
+  min-width: 204px;
+  height: 256px;
+  border-radius: 20px;
+}
+
+.box_fillter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.input_search {
+  height: 50px;
+  width: 555px;
+  font-size: 20px;
+}
+
+.box_fillter .box_select {
+  height: 50px;
+  background-color: #8142f6;
+}
+
+.product_total {
+  font-size: 18px;
+  color: #919191;
+}
+
+.add_margin {
+  margin-top: 60px;
+}
+
+.products_giveaway {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.product_giveaway {
+  position: relative;
+  min-width: 360px;
+  width: 360px;
+  height: 360px;
+  border-radius: 20px;
+}
+
+/* about me */
+
+.box_talk_share {
+
+    border-bottom: 1px solid #000000;
+}
+.talk_share {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 36px;
+}
+
+.contact_me {
+    margin-top: 36px;
+}
+
+.contact_title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35.16px;
+}
+
+.contact_item {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    height: 23px;
+    margin-bottom: 36px;
+    margin-top: 28px;
+
+}
+
+.contact_link {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23.44px;
+    text-align: center;
+}
+
+.custom_action_remove {
+    width: fit-content;
+    align-items: center;
+    padding: 0 8px;
+    background-color: #FFFF;
+    gap: 16px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 12px;
+}
+
+.action_remove_follow_profile {
+    white-space: nowrap;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 37.5px;
+}
+
+.custom_action_remove:hover {
+    background-color: #F2F3F5;
+}
+
+
+@media screen and (min-width: 1336px) {
+    .profile_creator {
+        padding: 0 66px;
+      }
+}
+
+
+@media screen and (max-width: 912px) {
+    .profile_creator {
+        padding: 0 25px;
+      }
+}
+
+@media screen and (max-width: 768px) {
+    .profile_creator {
+        padding: 0 25px;
+      }
+}
+
+@media screen and (max-width: 430px) {
+  .profile_creator {
+    padding: 0 13px;
+  }
+  .profile_image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .action button {
+    margin-right: 20px;
+    white-space: nowrap;
+  }
+
+  .box_fillter {
+    display: block;
+  }
+
+  .input_search {
+    width: 100%;
+  }
+
+  .talk_share {
+    font-size: 16px;
+  }
+}
