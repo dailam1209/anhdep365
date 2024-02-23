@@ -1,14 +1,29 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import styles from './create.module.css';
+import { Type } from "@/component/interface"
 import styleBrand from '../brand.module.css'
 import { ModalCustom } from '@/commons/modal/modal';
 import { Logos } from './logos';
 import { BrandOfYou, Edit, Plus } from '@/public/brand'
 import { useMediaQuery } from 'react-responsive';
-import { TabSideContext } from '@/pages/_app';
+import { LocationContext, TabSideContext } from '@/pages/_app';
 import Color from './color';
 import Font from './font';
 import { ModalAddBrand } from './ModalAddBrand';
+
+interface BrandType{
+  index:number,
+  image:string,
+  color:string,
+  title:string
+}
+
+interface DesignDimensionType{
+  itemPerRow:number,
+  windowWidth:number,
+  gap:number,
+  marginLeft:number
+}
 
 export default function  CreateBrand  ()  {
   const [openAdd, setOpenAdd ] = useState(false);
@@ -16,7 +31,15 @@ export default function  CreateBrand  ()  {
   const isTabnetCheck: boolean = useMediaQuery({
     query: "(max-width: 912px)"
   });
+  const {locationOfSite, setLocationOfSite}:Type = {...useContext(LocationContext)};
+
   const {isTabSide, setTabSide} = {...useContext(TabSideContext)};
+
+  useEffect(()=>{
+    if(locationOfSite?.name !== 'brand'){
+      setLocationOfSite({name:'brand'})
+    }
+  },[])
 
   return (
     <div className={`${isTabnetCheck ? styleBrand.container : styleBrand.container_width} ${isTabSide ? '' : styleBrand.full_width} ${ isTabnetCheck ? '' : isTabSide ? '' : styleBrand.transform}`}>

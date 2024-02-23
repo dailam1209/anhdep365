@@ -75,15 +75,15 @@ const Slide: React.FC<numberArrow> = ({ number, space, item, className, isTitle,
         </Swiper>
       </div>
         <div
-          className={`prev-${number} ${styles.slide_btn} ${styles.slide_btn_left} ${activeIndex >=  1 ? styles.display_block :  styles.display_none}`}
+          className={` ${styles.slide_btn} ${styles.slide_btn_left} ${activeIndex >=  1 ? styles.display_block :  styles.display_none} prev-${number}`}
         >
           <ArrowRight className={``} />
         </div>
 
 
           <div
-            className={`next-${number} ${styles.slide_btn} ${styles.slide_btn_right} ${activeIndex !== 12
-               ? styles.display_block : styles.display_none}`}
+            className={` ${styles.slide_btn} ${styles.slide_btn_right} ${activeIndex !== 12
+               ? styles.display_block : styles.display_none} next-${number}`}
                style={{
                 left : `${isTabSide ? `85%` : '95%'}`
               }}

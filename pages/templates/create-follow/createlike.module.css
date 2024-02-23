@@ -1,0 +1,497 @@
+.create_follow_wrapper {
+    padding: 0 38px;
+}
+
+.item_user {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.background_user {
+    position: relative;
+    width: 100%;
+    height: 263.74px;
+}
+
+.background {
+    height: 100%;
+    display: flex;
+    border-radius: 32px;
+    overflow: hidden;
+    gap: 6.15px;
+}
+
+.background_left {
+    position: relative;
+    width: 345.05px;
+    height: 100%;
+}
+
+.background_right {
+    position: relative;
+    display: flex ;
+    flex: 1;
+    flex-direction: column;
+    gap: 6.15px;
+}
+
+.image_top {
+    position: relative;
+    height: calc((100% - 6.15px) / 2);
+}
+
+.image_bottom {
+    position: relative;
+    height: calc((100% - 6.15px) / 2);
+
+}
+
+/* image user */
+
+.image_user {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transform: translateY(50%);
+    
+}
+.image_user_border {
+    position: relative;
+    width: 130.55px;
+    height: 130.55px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+.image {
+    position: relative;
+    width: 100.66px;
+    height: 100.66px;
+    border-radius: 50%;
+}
+
+.infor_follow {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.infor_name {
+    font-size: 24px;
+    line-height: 28.13px;
+    font-weight: 500;
+}
+
+.infor_user_follow {
+    margin-top: 24px;
+}
+
+
+.infor_user_follow {
+    color: #54595D;
+}
+
+
+
+.action_follow {
+    padding: 23px 31px;
+    margin-top: 20px;
+    width: fit-content;
+    border: none;
+    background-color: #F2F3F5;
+    font-size: 24px;
+    line-height: 28.13px;
+    color: #00042B;
+    border-radius: 10px;
+}
+
+.create_follow_wrapper .display_block {
+
+}
+
+/* have follow */
+
+.wrapper__have_follow {
+    margin-top: 100px;
+}
+
+.follow_filter {
+
+}
+
+.follow_title {
+    font-size: 36px;
+    line-height: 42.19px;
+    font-weight: 500;
+}
+
+.follow_number {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.13px;
+    color: #464444;
+}
+
+.box_select {
+    position: relative;
+    height: 74px;
+    align-items: center;
+    display: flex;
+}
+
+.icon_select {
+    position: absolute;
+    left: 1rem;
+}
+
+.follow_empty {
+    display: flex;
+}
+
+.image_empty {
+    width: 400px;
+    height: 253.67px;
+    position: relative;
+}
+
+.empty_text {
+    margin-left: 80px;
+    margin-top: 81.84px;
+}
+
+
+.text_notice {
+    font-size: 32px;
+    line-height: 37.5px;
+    font-size: 500;
+    color: #000000;
+}
+
+.suggets_step {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 28.13px;
+    color: #464444;
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    /* .create_follow_wrapper {
+        padding: 0 17px;
+    } */
+
+    .empty_text {
+        margin-left: 60px;
+    }
+    
+}
+
+@media screen and (max-width: 1366px) {
+    /* .create_follow_wrapper {
+        padding: 0 17px;
+    } */
+
+    .empty_text {
+        margin-left: 40px;
+    }
+    
+}
+
+
+@media screen and (max-width: 430px) {
+    .create_follow_wrapper {
+        padding: 0 17px;
+    }
+
+    .empty_text {
+        margin-left: 40px;
+        margin-top: 81.84px;
+    }
+
+    .follow_title {
+        font-size: 24px;
+    }
+
+    .follow_number {
+        font-size: 20px;
+    }
+
+    .box_select {
+        display: none;
+    }
+
+    .follow_empty {
+        display: block;
+        margin-top: 50px;
+    }
+    
+    .empty_text {
+        margin: 0;
+        margin-bottom: 127.32px;
+
+    }
+
+    .text_notice {
+        font-size: 24px;
+    }
+
+    .suggets_step {
+        font-size: 20px;
+    }
+}
+
+/* item user follow active */
+
+.follow__item {
+    margin-top: 94px;
+}
+
+.follow__actions {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+
+}
+
+.follow__action_user {
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user_img {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.follow__action_name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.13px;
+}
+
+.follow__action_handle {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    height: 100%;
+}
+
+.action_share {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 12px 10px;
+    cursor: pointer;
+}
+
+.action_share:hover {
+    background-color: #F6F5F5;
+}
+
+.actione_text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.13px;
+}
+
+.action_three_dot {
+    padding: 20px 14px;
+}
+
+.action_three_dot:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 130px;
+    height: 20px;
+    transform: translateX(-50px);
+}
+
+.box_action_remove {
+    position: absolute;
+    width: 141px;
+    height: 51px;
+    background-color: red;
+    top: 60px;
+    transform: translateX(-55px);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+}
+
+.action_remove_follow {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F5F5;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 23.44px;
+    font-weight: 400;
+}
+
+.action_three_dot:hover .box_action_remove {
+    display: flex;
+}
+
+/* render list image of user follow */
+
+.box_list_img {
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 60px;
+
+}
+.box_list_img::-webkit-scrollbar {
+    display: none;
+  }
+
+  .box_list_img {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.list_img_show {
+    display: flex;
+    gap: 30px;
+    width: 200%;
+}
+
+.img_time {
+    position: relative;
+    /* min-width: 190px; */
+    width: 190px;
+    height: 256px;
+    border-radius: 20px;
+}
+
+.action_img_above {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 14px;
+    border-radius: 10px;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.action_left {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.action_right {
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+.action_img_icon {
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B1B1B80;
+}
+
+.action_when_hover {
+    position: absolute;
+    background-color: white;
+    height: auto;
+    top: 62px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 0;
+    display: none;
+}
+
+.action_right:hover .action_when_hover  {
+    display: flex;
+}
+
+.action_item {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 372px;
+    gap: 30px;
+}
+
+.action_item_text {
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.action_custom_icon {
+    width: 30px;
+    height: 30px;
+}
+
+.action_when_hover {
+    padding: 0 10px;
+    border-radius: 8px ;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.action_item {
+    margin-bottom: 2px;
+}
+
+.action_when_hover .action_item:first-child {
+    padding-top: 10px;
+}
+
+.action_when_hover .action_item:last-child {
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+

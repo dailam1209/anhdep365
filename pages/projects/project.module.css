@@ -7,7 +7,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 52px 200px 60px 200px;
-    transform: translateX(-165px);
+    /* transform: translateX(-165px); */
 }
 .header{
     width: 100%;
