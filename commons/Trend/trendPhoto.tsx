@@ -51,7 +51,7 @@ const TrendPhoto = () => {
       <div className={styles.all__image_trend}>
         <ul className={styles.image_gallery}>
           {images.map((image, index) => (
-            <li>
+            <li key={index}>
               <img src={image.path} alt="" />
             </li>
           ))}

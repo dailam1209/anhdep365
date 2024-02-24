@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
-import styles from "./create.module.css";
 import { Delete, Down, Edit, Plus } from "@/public/brand";
 import { Input } from "antd";
-import EditFront from "./editFont";
 import Editor from "@/component/quill_edit/edit";
+import styles from "./create.module.css";
 
 const Font = () => {
   const [number, setNumber] = useState<number>(0);
@@ -37,6 +36,7 @@ const Font = () => {
           }}>
           {arrayInput.map((input, index) => (
             <Input
+            key={index}
               className={styles.brand_input}
               disabled={index + 1 == activeInput}
               placeholder="Tiêu đề"

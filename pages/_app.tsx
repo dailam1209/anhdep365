@@ -1,10 +1,11 @@
+import NavMobile from "@/commons/navbarMobile/navMobile";
 import { LocationOfSite } from "@/component/interface";
 import Layout from "@/component/layout/layout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Context, createContext, useContext, useEffect, useState } from "react";
+import { Context, createContext,  useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import NavMobile from "./photo/commons/navbarMobile/navMobile";
+
 
 export const LocationContext = createContext({
   locationOfSite: { name: "" },

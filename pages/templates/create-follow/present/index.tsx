@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "./present.module.css";
 import Slide from "@/commons/Slide/Slide";
-import { ArrowRightPresentIcon } from '@/public/create_follow/present'
+import { ArrowRightPresentIcon, PlayPresentIcon } from '@/public/create_follow/present'
 
 interface CollectionProps {
   url: string;
@@ -32,7 +32,7 @@ const TryNowPresent = () => {
   return (
     <div className={styles.try_it_all}>
       {arrayRender.map((item, index) => (
-        <div className={styles.try_follow}>
+        <div key={index} className={styles.try_follow}>
           <div className={styles.try_des}>
             <p className={styles.try_text}>
               Ghi hình ngay, thuyết trình sau<br></br>
@@ -52,6 +52,19 @@ const TryNowPresent = () => {
   );
 };
 
+
+const VideoItemPresent = () => {
+  return (
+    <div className={styles.video_present}>
+      <div className={styles.video_img}>
+        <Image src="/create_follow/present/video_slide.png" alt="" width={270} height={150}/>
+      <div className={styles.play_present}>
+      <PlayPresentIcon className={``}/>
+      </div>
+      </div>
+    </div>
+  )
+}
 const Present = () => {
   const listItem1 = [
     {
@@ -115,6 +128,69 @@ const Present = () => {
       )
     }
   ];
+
+  const listItem2 = [
+    {
+      key: 1,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 2,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 3,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 4,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 5,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 6,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 7,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 8,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 9,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    },
+    {
+      key: 10,
+      children: () => (
+        <VideoItemPresent/>
+      )
+    }
+  ];
   return (
     <div>
       {/* collection */}
@@ -124,11 +200,31 @@ const Present = () => {
         item={listItem1}
         className={""}
         isTitle={false}
-        title={""}
-      />
+        title={""} isShowAllDetail={false}      />
       <div className={styles.try_box}>
         <TryNowPresent/>
       </div>
+      <Slide
+        number={0}
+        space={16.4}
+        item={listItem2}
+        className={""}
+        isTitle={true}
+        title={"Bài thuyết trình"} isShowAllDetail={true}      />
+      <Slide
+        number={0}
+        space={16.4}
+        item={listItem2}
+        className={""}
+        isTitle={true}
+        title={"Thuyết trình lên ý tưởng"} isShowAllDetail={true}      />
+      <Slide
+        number={0}
+        space={16.4}
+        item={listItem2}
+        className={""}
+        isTitle={true}
+        title={"Thuyết trình trò chơi"} isShowAllDetail={true}      />
     </div>
   );
 };

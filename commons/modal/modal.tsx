@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import {  Button, Space  } from 'antd'
+import React, { ReactComponentElement, useState } from "react";
 import Modal from "antd";
+import {  Button, Space  } from 'antd'
 
 export interface ModalProps {
     openModalAddToGroup: any
     setOpenModalAddToGroup: any,
-    text: string
+    text: string,
 }
-export const ModalCustom: React.FC<ModalProps> = ({ openModalAddToGroup, setOpenModalAddToGroup, text }) => {
+
+export const ModalCustom:React.FC<ModalProps> = ({ openModalAddToGroup, setOpenModalAddToGroup, text }) => {
     const [isChecked, setIsChecked] = useState(false);
-    const [openModalSucess, setOpenModalSucess] = useState(false)
+    const [openModalSucess, setOpenModalSucess] = useState(false);
 
     // const handleCheckAllChange = (e) => {
     //     setIsChecked(e.target.checked);
@@ -20,8 +21,8 @@ export const ModalCustom: React.FC<ModalProps> = ({ openModalAddToGroup, setOpen
     //     setOpenModalSucess(true)
     // }
     return (
-
-            <Modal
+        <>
+            {/* <Modal
                 width={671}
                 open={openModalAddToGroup}
                 onCancel={() => {
@@ -39,7 +40,7 @@ export const ModalCustom: React.FC<ModalProps> = ({ openModalAddToGroup, setOpen
                 </div>
                 <div className={``}>
                     
-                    <div className={}>
+                    <div className={``}>
                         <div style={{ flex: 1 }}>
                             <Button
                                 size="large"
@@ -62,7 +63,8 @@ export const ModalCustom: React.FC<ModalProps> = ({ openModalAddToGroup, setOpen
                         </div>
                     </div>
                 </div>
-            </Modal>
+            </Modal> */}
+        </>
     )
 }
 

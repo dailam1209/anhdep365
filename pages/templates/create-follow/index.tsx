@@ -50,7 +50,7 @@ const CreateFollow = () => {
       ];
     return (
         <div id="create_follow_wrapper" className={styles.create_follow_wrapper}>
-            <Slide number={0} space={20} item={listItem1} className={""} isTitle={false} title={""}/>
+            <Slide number={0} space={20} item={listItem1} className={""} isTitle={false} title={""} isShowAllDetail={false}/>
             <HaveFollow/>
             <div className={styles.box_list_img}>
               <ListImgUserFollowing/>

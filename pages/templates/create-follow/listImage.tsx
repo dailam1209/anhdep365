@@ -14,8 +14,8 @@ const ListImgUserFollowing = () => {
     <div className={styles.list_img_show}>
         {
             [1,1,1,1,1,1,1,1,1,1,1,11,].map((img, index) => (
-                <Link href={'/templates/create-follow/profile-user'}>
-                    <div className={styles.img_time} style={{
+                <Link key={index}  href={'/templates/create-follow/profile-user'}>
+                    <div key={index} className={styles.img_time} style={{
                         backgroundImage: `url(/create_follow/img_user_following.png)`,
                         backgroundPosition: 'center',
                         backgroundSize:'cover',

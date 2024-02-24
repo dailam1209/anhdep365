@@ -10,25 +10,35 @@ import { Navigation, Pagination } from "swiper/modules";
 
 import styles from "./slide.module.css";
 import ItemSampleContentExample from "./itemSampleExample";
+import Link from "next/link";
 
 export interface numberArrow {
   number: number;
   space: number,
   item: any,
   className: string
-  isTitle: boolean
+  isTitle: boolean,
+  isShowAllDetail: boolean,
   title: string
 }
 
 
-const Slide: React.FC<numberArrow> = ({ number, space, item, className, isTitle, title }) => {
+const Slide: React.FC<numberArrow> = ({ number, space, item, className, isTitle, title, isShowAllDetail }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const {isTabSide, setTabSide} = {...useContext(TabSideContext)};
 
   return (
     <div>
       {
-        isTitle && <p className={styles.content_slide}>{title}</p>
+        isTitle && <div className={styles.title}>
+           <p className={styles.content_slide}>{title}</p>
+           {
+            isShowAllDetail &&
+           <Link href={''}>
+           <p>Xem tất cả</p>
+           </Link>
+           }
+           </div>
       }
     <div
       style={{

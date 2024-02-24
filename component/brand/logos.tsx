@@ -65,7 +65,9 @@ export const Logos: React.FC<LogosProps> = ({ listLogo }) => {
         }} className={`${styles.color_wrap_action} `} >
         {
  [1,1,1,1,1,1,1,1].map((item, index) => (
-  <ItemOfLogo/>
+  <div key={index}>
+    <ItemOfLogo/>
+  </div>
   ))
           }
         </div>
