@@ -71,3 +71,27 @@
 .try_img {
     margin-right: 10px;
 }
+
+/* present */
+.video_present {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.video_img {
+    position: relative;
+}
+
+.play_present {
+    position: absolute;
+    top: 117px;
+    left: 17px;
+    width: 35px;
+    height: 24px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0C0C0C80;
+    cursor: pointer;
+}

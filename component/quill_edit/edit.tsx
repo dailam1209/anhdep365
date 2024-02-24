@@ -52,9 +52,9 @@ const IconElement = () => {
 }
 const Editor = ({ className, className_rv ,name, form}:  Props) => {
     // Khai báo state để lưu trữ nội dung của trình soạn thảo
+    const currentEditRef = useRef(null);
     const [content, setContent] = useState('');
     const [ isEdit, setIsEdit ] = useState<Boolean>(false);
-    const currentEditRef = useRef();
     const [isHandle, setIsHandle ] = useState<Boolean>(false);
 
 
@@ -76,8 +76,23 @@ const Editor = ({ className, className_rv ,name, form}:  Props) => {
         if(!isHandle) {
             return 0;
         }
-        const blockEdit = currentEditRef?.current.querySelector('.ql-snow');
-        const blockEditContent = currentEditRef?.current.querySelector('.ql-container');
+        let blockEdit
+        let blockEditContent
+        // let blockEdit 
+        if (currentEditRef && currentEditRef.current) {
+            const element = currentEditRef.current as any;
+            blockEdit = element.querySelector('.ql-snow');
+        }
+
+        if (currentEditRef && currentEditRef.current) {
+            const element = currentEditRef.current as any;
+            blockEditContent = element.querySelector('.ql-snow');
+        }
+
+        
+        // const blockEdit = currentEditRef?.current ? currentEditRef?.current?.querySelector('ql-snow') : undefined;
+        // const blockEditContent = currentEditRef?.current ?  currentEditRef?.current?.querySelector('.ql-container') : undefined;
+       
         if(isEdit ) {
             if(blockEdit) {
                 blockEdit.classList.add(`${styles.hidden_block}`)
@@ -86,7 +101,6 @@ const Editor = ({ className, className_rv ,name, form}:  Props) => {
         } else {
             blockEdit.classList.remove(`${styles.hidden_block}`)
             blockEditContent.classList.remove(`${styles.add_border_top}`)
-            // console.log(blockEditContent);
         }
         
     }

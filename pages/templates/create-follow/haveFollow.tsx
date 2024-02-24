@@ -51,7 +51,7 @@ const HaveFollow = () => {
           <div className={styles.box_select}>
             <Select
             suffixIcon={ <DropDowFollow/>}
-              defaultValue={options[0]}
+              defaultValue={options[0].value}
               style={{ width: 120 }}
               onChange={handleChange}
               options={options}

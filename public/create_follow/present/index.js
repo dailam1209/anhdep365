@@ -15,3 +15,16 @@ export const ArrowRightPresentIcon = ({ className }) => {
     </svg>
   );
 };
+
+export const PlayPresentIcon = ({ className }) => {
+  return (
+    <svg className={className} width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.6244 5.40029L5.17142 1.22029C4.2172 0.685107 3.04174 0.684335 2.08677 1.21827C1.13181 1.75219 0.542026 2.73994 0.539062 3.81029V12.1903C0.542026 13.2606 1.13181 14.2484 2.08677 14.7823C3.04174 15.3162 4.2172 15.3155 5.17142 14.7803L12.6244 10.6003C13.5818 10.0649 14.1719 9.07346 14.1719 8.00029C14.1719 6.92712 13.5818 5.93568 12.6244 5.40029Z" fill="white"/>
+</svg>
+
+  );
+};
+
+
+
+

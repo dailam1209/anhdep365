@@ -40,7 +40,7 @@ export default function Layout({ children }: { children: ReactElement }) {
       <NestLayout>
         <>
             <div ref={currentWidthNavRef} style={{
-              position: !isTabSide ? "absolute" : "",
+              position: !isTabSide ? "absolute" : undefined,
               left: !tabNet ? "-331px" : ""
             }}>
               <TabSide />

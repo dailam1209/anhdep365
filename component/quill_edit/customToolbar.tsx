@@ -27,9 +27,11 @@ const CustomToolbar = () => (
       return (
         <span className="ql-formats">
           {classes.map((formatData) => {
-            return formatData?.options
-              ? renderOptions(formatData)
-              : renderSingle(formatData);
+            if ('options' in formatData && formatData.options) {
+              return renderOptions(formatData);
+            } else {
+              return renderSingle(formatData);
+            }
               
           })}
         </span>

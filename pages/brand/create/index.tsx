@@ -1,15 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
-import styles from './create.module.css';
+import styles from '@/component/brand/create.module.css';
 import { Type } from "@/component/interface"
 import styleBrand from '../brand.module.css'
 import { ModalCustom } from '@/commons/modal/modal';
-import { Logos } from './logos';
+import { Logos } from '../../../component/brand/logos';
 import { BrandOfYou, Edit, Plus } from '@/public/brand'
 import { useMediaQuery } from 'react-responsive';
 import { LocationContext, TabSideContext } from '@/pages/_app';
-import Color from './color';
-import Font from './font';
-import { ModalAddBrand } from './ModalAddBrand';
+import Color from '../../../component/brand/color';
+import Font from '../../../component/brand/font';
+import { ModalAddBrand } from '@/component/brand/create/ModalAddBrand';
 
 interface BrandType{
   index:number,
@@ -68,6 +68,7 @@ export default function  CreateBrand  ()  {
           <Logos listLogo={`${logos} ${styles.brand__color}`}/>
           <Logos listLogo={`${logos} ${styles.brand__color}`}/>
       </div>
+
       <ModalAddBrand
         isOpen={openAdd}
         setOpenAdd={setOpenAdd}

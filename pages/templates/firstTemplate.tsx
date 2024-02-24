@@ -1,7 +1,5 @@
-import Slide from "@/commons/slide/Slide";
 import React, { ReactElement, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Item from "@/commons/slide/Item";
 import stylesProject from "../../pages/projects/project.module.css";
 import Brand from "../brand";
 import { Design } from "@/component/project/design";
@@ -10,9 +8,10 @@ import { Video } from "@/component/project/video";
 import { AllProject } from "@/component/project/allProject";
 import { Folder } from "@/component/project/folder";
 import styleSlide from "../../commons/Slide/slide.module.css";
-import ItemSamepleContentExample from "@/commons/slide/itemSampleExample";
-import ItemSampleFlow from "@/commons/slide/itemSampleFlow";
-import Banner from "@/commons/banner/banner";
+import Item from "@/commons/Slide/Item";
+import ItemSamepleContentExample from "@/commons/Slide/itemSampleExample";
+import Slide from "@/commons/Slide/Slide";
+import Banner from "@/commons/Banner/banner";
 
 interface tabType {
   index: number;
@@ -247,8 +246,7 @@ const FirstTemplate = () => {
           item={listItem1}
           className={""}
           isTitle={false}
-          title={""}
-        />
+          title={""} isShowAllDetail={false}        />
       </div>
       <Banner/>
       <div className={`${stylesProject.tab_block}`}>
@@ -315,8 +313,7 @@ const FirstTemplate = () => {
           item={listItem3}
           className={""}
           isTitle={true}
-          title={""}
-        />
+          title={""} isShowAllDetail={false}        />
       </div>
       <Slide
         number={3}
@@ -324,72 +321,64 @@ const FirstTemplate = () => {
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
       <Slide
         number={4}
         space={13.75}
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
       <Slide
         number={5}
         space={13.75}
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
       <Slide
         number={6}
         space={13.75}
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
       <Slide
         number={7}
         space={13.75}
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
       <Slide
         number={8}
         space={13.75}
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
       <Slide
         number={9}
         space={13.75}
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
       <Slide
         number={10}
         space={13.75}
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
       <Slide
         number={11}
         space={13.75}
         item={listItem3}
         className={`${styleSlide.slide_margin_bottom}`}
         isTitle={true}
-        title={"Có thể bạn sẽ thích"}
-      />
+
+        title={"Có thể bạn sẽ thích"} isShowAllDetail={false}      />
     </div>
   );
 };

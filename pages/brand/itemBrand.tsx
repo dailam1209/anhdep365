@@ -44,13 +44,22 @@ const ItemBrand = () => {
   };
   const isMoreTabnet = useMediaQuery({ query: "(max-width: 1366px)" });
 
+  useEffect(() => {
+    if(itemWidthRef.current) {
+      const element = itemWidthRef.current as any;
+      if(element) {
+        setWidthTitle(element.clientWidth)
+      }
+    }
+  }, [])
+
   return (
     <div className={`${styles.design}`}>
       <div className={`${styles.block_title}`}>
         <p
           className={`${styles.title}`}
           style={{
-            width: `${isMoreTabnet ? (itemWidthRef.current?.clientWidth * 4 + 4 * 16) + 'px' : '100%'}`,
+            width: `${isMoreTabnet ? `${itemWidthRef?.current && widthTitle * 4 + 4 * 16} + 'px'` : '100%'}`,
             alignItems: 'center'
           }}
         >
